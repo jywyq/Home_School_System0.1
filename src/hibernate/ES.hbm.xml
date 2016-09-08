@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-9-8 14:30:58 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="hibernate.ES" table="e_s" catalog="school_home_system">
+        <id name="sid" type="java.lang.Integer">
+            <column name="sid" />
+            <generator class="identity" />
+        </id>
+        <property name="sname" type="string">
+            <column name="sname" length="45" />
+        </property>
+        <property name="ssex" type="string">
+            <column name="ssex" length="45" />
+        </property>
+        <property name="sage" type="java.lang.Integer">
+            <column name="sage" />
+        </property>
+        <property name="sh" type="java.lang.Double">
+            <column name="sh" precision="22" scale="0" />
+        </property>
+        <property name="sw" type="java.lang.Double">
+            <column name="sw" precision="22" scale="0" />
+        </property>
+        <property name="sadd" type="string">
+            <column name="sadd" length="45" />
+        </property>
+        <property name="spwd" type="string">
+            <column name="spwd" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

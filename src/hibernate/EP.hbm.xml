@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-9-8 14:30:58 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="hibernate.EP" table="e_p" catalog="school_home_system">
+        <id name="pid" type="java.lang.Integer">
+            <column name="pid" />
+            <generator class="identity" />
+        </id>
+        <property name="pname" type="string">
+            <column name="pname" length="45" />
+        </property>
+        <property name="psex" type="string">
+            <column name="psex" length="45" />
+        </property>
+        <property name="page" type="java.lang.Integer">
+            <column name="page" />
+        </property>
+        <property name="ptel" type="string">
+            <column name="ptel" length="45" />
+        </property>
+        <property name="pcpy" type="string">
+            <column name="pcpy" length="45" />
+        </property>
+        <property name="ppwd" type="string">
+            <column name="ppwd" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

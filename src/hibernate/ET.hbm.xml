@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-9-8 14:30:58 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="hibernate.ET" table="e_t" catalog="school_home_system">
+        <id name="tid" type="java.lang.Integer">
+            <column name="tid" />
+            <generator class="identity" />
+        </id>
+        <property name="tname" type="string">
+            <column name="tname" length="45" />
+        </property>
+        <property name="tsex" type="string">
+            <column name="tsex" length="45" />
+        </property>
+        <property name="tage" type="java.lang.Integer">
+            <column name="tage" />
+        </property>
+        <property name="ttel" type="string">
+            <column name="ttel" length="45" not-null="true" />
+        </property>
+        <property name="tpwd" type="string">
+            <column name="tpwd" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
