@@ -16,5 +16,7 @@
 	<classpathentry kind="lib" path="F:/Mysql/mysql-connector-java-5.1.39/mysql-connector-java-5.1.39-bin.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hiber"/>
 	<classpathentry kind="lib" path="F:/Mysql/hibernate-release-5.2.2.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Tomcat/apache-tomcat-8.0.36/apache-tomcat-8.0.36/lib/tomcat-api.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/tomcat"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -5,6 +5,11 @@
 <head>
 <title></title>
 <meta charset="UTF-8">
+<meta name="description"
+	content="Creating Modal Window with Twitter Bootstrap">
+<link
+	href="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css"
+	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="Css/bootstrap.css" />
 <link rel="stylesheet" type="text/css"
 	href="Css/bootstrap-responsive.css" />
@@ -17,7 +22,6 @@
 
 <style type="text/css">
 body {
-	font-size: 20px;
 	padding-bottom: 40px;
 	background-color: #e9e7ef;
 }
@@ -38,37 +42,33 @@ body {
 </head>
 <body>
 	<form class="form-inline definewidth m20" action="#" method="get">
-		<font color="#777777"><strong>文档名称：</strong></font> <input type="text"
+		<font color="#33ccff"><strong>公告标题：</strong></font> <input type="text"
 			name="menuname" id="menuname" class="abc input-default"
 			placeholder="" value="">&nbsp;&nbsp;
 		<button type="submit" class="btn btn-primary">查询</button>
 		&nbsp;&nbsp;
-		<button type="button" id="addnew">
-			<a href="documentAdd.html">添加文档 
-		</button>
-		</a>
+		<button type="button" class="btn btn-success" id="addnew">添加公告</button>
 	</form>
 	<table class="table table-bordered table-hover definewidth m10">
 		<thead>
 			<tr>
-				<th>文档名称</th>
-				<th>分类</th>
-				<th>上传者</th>
-				<th>上传日期</th>
-				<th>管理菜单</th>
+				<th>公告标题</th>
+				<th>详情</th>
+				<th>发布时间</th>
+				<th>失效时间</th>
+				<th>修改</th>
+				<th>删除</th>
 			</tr>
 		</thead>
-
 		<tr>
-			<td>蒹葭</td>
-			<td>策</td>
-			<td><a href="studentdetail.html">小强</a></td>
-			<td>2016.07.22</td>
-
-			<td>
-				<button type="submit">删除</button> </a>
-			</td>
-
+			<td>人生何处不青山</td>
+			<td><a href="#" id="xiangqing" rel="popover"
+				data-original-title="公告标题"
+				data-content="后来回头的时候，才发现那时候可能是最好的时光，再也回不去的时光，再也做不了的事，再也鼓不起的勇气，再也浪不起来的我们">详情</a></td>
+			<td>2016-4-4</td>
+			<td>2016-4-8</td>
+			<td><a href="placardEdit.html">修改</a></td>
+			<td><a href="#">删除</a></td>
 		</tr>
 
 
@@ -76,3 +76,11 @@ body {
 
 </body>
 </html>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script>
+$(function ()
+{ $("#xiangqing").popover();
+});
+</script>

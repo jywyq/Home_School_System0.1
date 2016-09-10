@@ -1,15 +1,18 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2016-9-8 14:30:58 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 2016-9-9 14:57:27 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <class name="hibernate.Administrator" table="administrator" catalog="school_home_system">
-        <id name="aid" type="int">
+        <id name="aid" type="java.lang.Integer">
             <column name="aid" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <property name="apwd" type="string">
             <column name="apwd" length="45" not-null="true" />
+        </property>
+        <property name="aname" type="string">
+            <column name="aname" length="45" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>

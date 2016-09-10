@@ -1,7 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
 <html>
 <head>
+<base href="<%=basePath%>">
 <meta charset="utf-8">
 <title>家校通网站</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -32,7 +38,6 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	background-color: #DDDDDD
-	
 }
 
 .top1 {
@@ -49,8 +54,8 @@ body {
 }
 
 .title {
-float:left;
-    margin:-32px 20px;
+	float: left;
+	margin: -32px 20px;
 	font-size: 40px;
 	color: #FFFFFF;
 	font-height: 55px;
@@ -83,7 +88,7 @@ float:left;
 .right {
 	position: absolute;
 	left: 200px;
-	top:97px;
+	top: 97px;
 	width: 85.2%;
 	height: 85%;
 	border-top: 0px solid #484860;
@@ -214,12 +219,12 @@ float:left;
 		<div class="logo">
 			<img src="images/admin_logo.png" title="在哪儿" />
 		</div>
-		<div class="title" >
+		<div class="title">
 			<h3>家校通网站后台管理系统</h3>
 		</div>
 		<div class="fr top-link">
 			<a href="admin_list.jsp" target="mainCont" title="DeathGhost"><i
-				class="adminIcon"></i><span>管理员：DeathGhost</span></a> 
+				class="adminIcon"></i><span>管理员：DeathGhost</span></a>
 		</div>
 	</div>
 
@@ -230,8 +235,8 @@ float:left;
 					id="2"><img src="images/bbb_03.jpg"><img
 					src="images/bbb_04.jpg">
 			</div>
-			
-          	<div class="div2">
+
+			<div class="div2">
 				<div class="spgl"></div>
 				视频管理
 			</div>
@@ -240,7 +245,7 @@ float:left;
 					onClick="openurl('videoQuery.jsp');">查看所有视频</a></li>
 				<li><a class="a" href="javascript:void(0);"
 					onClick="openurl('uservideoQuery.jsp');">用户视频列表</a></li>
-			   
+
 			</div>
 			<div class="div2">
 				<div class="spgl"></div>
@@ -250,9 +255,9 @@ float:left;
 				<ul>
 					<li><a class="a" href="javascript:void(0);"
 						onClick="openurl('documentQuery.jsp');">查看所有文档</a></li>
-						<li><a class="a" href="javascript:void(0);"
+					<li><a class="a" href="javascript:void(0);"
 						onClick="openurl('userdocumentQuery.jsp');">用户文档列表</a></li>
-					
+
 				</ul>
 			</div>
 			<div class="div2">
@@ -263,7 +268,7 @@ float:left;
 				<ul>
 					<li><a class="a" href="javascript:void(0);"
 						onClick="openurl('classQuery.jsp');">大类信息</a></li>
-						
+
 				</ul>
 			</div>
 			<div class="div2">
@@ -278,7 +283,7 @@ float:left;
 						onClick="openurl('teacherQuery.jsp');">老师管理</a></li>
 				</ul>
 			</div>
-			
+
 			<div class="div2">
 				<div class="gggl"></div>
 				评价管理
@@ -306,11 +311,11 @@ float:left;
 				</ul>
 			</div>
 			<div class="div2">
-				<div class="pjgl"href="javascript:void(0);"onClick="openurl('afficheQuery.jsp');"></div>
-				<a class="a1" href="javascript:void(0);"onClick="openurl('afficheQuery.jsp');">
-					管理员
-				</a>
-				
+				<div class="pjgl" href="javascript:void(0);"
+					onClick="openurl('ShowAllAdmin.jsp');"></div>
+				<a class="a1" href="javascript:void(0);"
+					onClick="openurl('ShowAllAdminServlet');"> 管理员 </a>
+
 			</div>
 			<a class="a1" href="login.jsp"><div class="div2">
 					<div class="tcht"></div>
@@ -324,11 +329,6 @@ float:left;
 			scrolling="auto" marginheight="0" marginwidth="0" align="center"
 			style="border: 0px solid #CCC; margin: 0; padding: 0;"></iframe>
 	</div>
-
-
-
-
-
 
 
 </body>
