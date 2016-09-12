@@ -48,9 +48,9 @@ public class ShowAllAdminServlet extends HttpServlet {
 	 *      response)
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.err.println("FUCK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-		System.out.print("----------------------------------------------");
-		System.out.println("----------------------------------------------");
+		//System.err.println("FUCK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		//System.out.print("----------------------------------------------");
+		//System.out.println("----------------------------------------------");
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		List<Administrator> list = new ArrayList<Administrator>();
@@ -60,8 +60,8 @@ public class ShowAllAdminServlet extends HttpServlet {
 		request.getRequestDispatcher("ShowAllAdmin.jsp").forward(request, response);// 转发到现实全部的页面
 		out.flush();
 		out.close();
-		out.print("----------------------------------------------");
-		System.out.println("----------------------------------------------");
+		//out.print("----------------------------------------------");
+		//System.out.println("----------------------------------------------");
 	}
 
 }

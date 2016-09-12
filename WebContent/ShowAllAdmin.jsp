@@ -45,7 +45,7 @@ body {
 	<button type="submit" class="btn btn-primary">查询</button>
 	&nbsp;&nbsp;
 	<button type="button" id="addnew">
-		<a href="documentAdd.jsp">添加管理员 
+		<a href="adminAdd.jsp">添加管理员 
 	</button>
 	</a>
 	<table class="table table-bordered table-hover definewidth m10"

@@ -224,7 +224,7 @@ body {
 		</div>
 		<div class="fr top-link">
 			<a href="admin_list.jsp" target="mainCont" title="DeathGhost"><i
-				class="adminIcon"></i><span>管理员：DeathGhost</span></a>
+				class="adminIcon"></i><span>管理员：王禹秋</span></a>
 		</div>
 	</div>
 
@@ -312,7 +312,7 @@ body {
 			</div>
 			<div class="div2">
 				<div class="pjgl" href="javascript:void(0);"
-					onClick="openurl('ShowAllAdmin.jsp');"></div>
+					onClick="openurl('ShowAllAdminServlet');"></div>
 				<a class="a1" href="javascript:void(0);"
 					onClick="openurl('ShowAllAdminServlet');"> 管理员 </a>
 
