@@ -16,7 +16,6 @@
     <servlet-name>ShowAllAdminServlet</servlet-name>
     <url-pattern>/ShowAllAdminServlet</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>AdminAddServlet</servlet-name>
     <servlet-class>servlet.AdminAddServlet</servlet-class>
@@ -25,7 +24,22 @@
     <servlet-name>AdminAddServlet</servlet-name>
     <url-pattern>/AdminAddServlet</url-pattern>
   </servlet-mapping>
-  
+  <servlet>
+    <servlet-name>QueryAdminById</servlet-name>
+    <servlet-class>servlet.QueryAdminById</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryAdminById</servlet-name>
+    <url-pattern>/QueryAdminById</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UpdateAdminServlet</servlet-name>
+    <servlet-class>servlet.UpdateAdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateAdminServlet</servlet-name>
+    <url-pattern>/UpdateAdminServlet</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

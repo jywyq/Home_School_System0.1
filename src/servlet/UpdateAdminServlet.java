@@ -12,34 +12,32 @@ import dao.AdminDao;
 import daoimp.AdminDaoImp;
 import hibernate.Administrator;
 
+public class UpdateAdminServlet extends HttpServlet {
 
-public class AdminAddServlet extends HttpServlet {
-
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
+		this.doPost(request, response);// 调用doPost方法
 		out.flush();
 		out.close();
 	}
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
+		int aid = Integer.parseInt(request.getParameter("aid"));// 获得页面传递过来的参数
 		String aname = request.getParameter("aname");
 		String apwd = request.getParameter("apwd");
 		Administrator ad = new Administrator();
+		ad.setAid(aid);
 		ad.setAname(aname);
 		ad.setApwd(apwd);
-		//System.out.println("ADD1 aname: "+ad.getAname()+"  apwd: "+ad.getApwd());
-		//System.out.println("WHAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		AdminDao dao = new AdminDaoImp();
-		dao.addEmp(ad);
-		response.sendRedirect("ShowAllAdminServlet");//�ض�����ʵȫ����Servlet��
+		dao.updateAd(ad);// 调用实现类的修改方法
+		response.sendRedirect("ShowAllAdminServlet");// 重定向到查询全部的Servlet
 		out.flush();
 		out.close();
 	}
-
 }

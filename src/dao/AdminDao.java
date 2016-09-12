@@ -9,4 +9,6 @@ public interface AdminDao {
 	public int maxPage();// 求最大页数的方法
 
 	public List<Administrator> queryAllEmp();
+	public Administrator queryAdById(int aid);
+	public void updateAd(Administrator ad);
 }

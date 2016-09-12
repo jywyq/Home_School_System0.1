@@ -15,7 +15,7 @@ public class AdminDaoImp implements AdminDao {
 	Transaction tr = session.beginTransaction();// 开启事务
 
 	public void addEmp(Administrator ad) {
-		System.out.println("---------------------ADD aname: "+ad.getAname()+"  apwd: "+ad.getApwd());
+		System.out.println("-----ADD aname: "+ad.getAname()+"  apwd: "+ad.getApwd());
 		session.save(ad);// 添加数据
 		tr.commit();// 提交事务
 	}
@@ -44,7 +44,21 @@ public class AdminDaoImp implements AdminDao {
 	public List<Administrator> queryAllEmp() {
 		List<Administrator> list = session.createQuery("from hibernate.Administrator").list();// 查询全部
 		tr.commit();// 提交事务
-		System.out.println("---------------QueryALLEMP--------------");
+		System.out.println("--------QueryALLEMP-------");
 		return list;
+	}
+
+	@Override
+	public Administrator queryAdById(int aid) {
+		Administrator ad = new Administrator();
+		ad = (Administrator) session.load(Administrator.class, aid);//根据id查询
+		return ad;
+	}
+
+	@Override
+	public void updateAd(Administrator ad) {
+		// TODO Auto-generated method stub
+		session.update(ad);//修改 
+		tr.commit();//提交事务
 	}
 }
