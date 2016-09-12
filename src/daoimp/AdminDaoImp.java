@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import dao.AdminDao;
 import hiber_sessionfac.HibernateSessionFactory;
@@ -59,6 +60,15 @@ public class AdminDaoImp implements AdminDao {
 	public void updateAd(Administrator ad) {
 		// TODO Auto-generated method stub
 		session.update(ad);//修改 
+		tr.commit();//提交事务
+	}
+
+	@Override
+	public void deleteAd(int aid) {
+		// TODO Auto-generated method stub
+		Query query = (Query) session.createQuery("delete Administrator where aid=:id");
+		query.setParameter("id", aid);
+		query.executeUpdate();//删除
 		tr.commit();//提交事务
 	}
 }

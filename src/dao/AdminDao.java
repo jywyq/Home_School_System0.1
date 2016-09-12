@@ -11,4 +11,5 @@ public interface AdminDao {
 	public List<Administrator> queryAllEmp();
 	public Administrator queryAdById(int aid);
 	public void updateAd(Administrator ad);
+	public void deleteAd(int aid);
 }
