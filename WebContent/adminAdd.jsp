@@ -101,16 +101,16 @@ body {
 	<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<font color="#777777"><strong>添加管理员：</strong></font>
 	<form action="AdminAddServlet" method="post" class="definewidth m20"
-		id="myform" enctype="multipart/form-data">
+		id="myform">
 		<table style="margin-left: 10px; margin-top: 3px;">
 			<tr>
 				<td>昵称：</td>
-				<td><input id="username" type="text" name="username"
+				<td><input id="username" type="text" name="aname"
 					style="width: 200px;" placeholder='请输入管理员昵称' /></td>
 			</tr>
 			<tr>
 				<td>密码：</td>
-				<td><input id="password" type="password" name="password"
+				<td><input id="password" type="password" name="apwd"
 					style="width: 200px;" placeholder='请输入密码' /></td>
 			</tr>
 			<tr>

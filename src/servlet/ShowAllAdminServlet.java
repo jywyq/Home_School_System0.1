@@ -20,7 +20,6 @@ import hiber_sessionfac.*;
  */
 @WebServlet("/ShowAllAdminServlet1")
 public class ShowAllAdminServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()

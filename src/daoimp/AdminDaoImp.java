@@ -15,6 +15,7 @@ public class AdminDaoImp implements AdminDao {
 	Transaction tr = session.beginTransaction();// 开启事务
 
 	public void addEmp(Administrator ad) {
+		System.out.println("---------------------ADD aname: "+ad.getAname()+"  apwd: "+ad.getApwd());
 		session.save(ad);// 添加数据
 		tr.commit();// 提交事务
 	}
