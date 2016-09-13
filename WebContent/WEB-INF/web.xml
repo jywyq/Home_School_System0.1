@@ -48,6 +48,62 @@
     <servlet-name>DeleteAdminById</servlet-name>
     <url-pattern>/DeleteAdminById</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <servlet-class>servlet.AdminLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <url-pattern>/AdminLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ShowAllStudentServlet</servlet-name>
+    <servlet-class>servlet.ShowAllStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowAllStudentServlet</servlet-name>
+    <url-pattern>/ShowAllStudentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>StuAddServlet</servlet-name>
+    <servlet-class>servlet.StuAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StuAddServlet</servlet-name>
+    <url-pattern>/StuAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryStuByIdServlet</servlet-name>
+    <servlet-class>servlet.QueryStuByIdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryStuByIdServlet</servlet-name>
+    <url-pattern>/QueryStuByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UpdateStuServlet</servlet-name>
+    <servlet-class>servlet.UpdateStuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateStuServlet</servlet-name>
+    <url-pattern>/UpdateStuServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryStuById</servlet-name>
+    <servlet-class>servlet.QueryStuById</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryStuById</servlet-name>
+    <url-pattern>/QueryStuById</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DeleteStuById</servlet-name>
+    <servlet-class>servlet.DeleteStuById</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteStuById</servlet-name>
+    <url-pattern>/DeleteStuById</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

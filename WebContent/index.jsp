@@ -238,36 +238,14 @@ body {
 
 			<div class="div2">
 				<div class="spgl"></div>
-				视频管理
-			</div>
-			<div class="div3">
-				<li><a class="a" href="javascript:void(0);"
-					onClick="openurl('videoQuery.jsp');">查看所有视频</a></li>
-				<li><a class="a" href="javascript:void(0);"
-					onClick="openurl('uservideoQuery.jsp');">用户视频列表</a></li>
-
-			</div>
-			<div class="div2">
-				<div class="spgl"></div>
-				文档管理
+				班级/课程
 			</div>
 			<div class="div3">
 				<ul>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('documentQuery.jsp');">查看所有文档</a></li>
+						onClick="openurl('classQuery.jsp');">班级信息</a></li>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('userdocumentQuery.jsp');">用户文档列表</a></li>
-
-				</ul>
-			</div>
-			<div class="div2">
-				<div class="spgl"></div>
-				类别管理
-			</div>
-			<div class="div3">
-				<ul>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('classQuery.jsp');">大类信息</a></li>
+						onClick="openurl('classQuery.jsp');">课程信息</a></li>
 
 				</ul>
 			</div>
@@ -278,26 +256,14 @@ body {
 			<div class="div3">
 				<ul>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('studentQuery.jsp');">学生管理</a></li>
+						onClick="openurl('ShowAllStudentServlet');">学生管理</a></li>
 					<li><a class="a" href="javascript:void(0);"
 						onClick="openurl('teacherQuery.jsp');">老师管理</a></li>
+					<li><a class="a" href="javascript:void(0);"
+						onClick="openurl('teacherQuery.jsp');">家长管理</a></li>
 				</ul>
 			</div>
 
-			<div class="div2">
-				<div class="gggl"></div>
-				评价管理
-			</div>
-			<div class="div3">
-
-				<ul>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('deletecomment.jsp');">评价删除</a></li>
-					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('useredit.jsp');">用户禁言</a></li>
-				</ul>
-
-			</div>
 			<div class="div2">
 				<div class="pjgl"></div>
 				公告管理

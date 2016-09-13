@@ -100,17 +100,42 @@ body {
 <body>
 	<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<font color="#777777"><strong>添加管理员：</strong></font>
-	<form action="AdminAddServlet" method="post" class="definewidth m20"
+	<form action="StuAddServlet" method="post" class="definewidth m20"
 		id="myform">
 		<table style="margin-left: 10px; margin-top: 3px;">
 			<tr>
-				<td>昵称：</td>
-				<td><input id="username" type="text" name="aname"
-					style="width: 200px;" placeholder='请输入管理员昵称' /></td>
+				<td>名字：</td>
+				<td><input id="username" type="text" name="sname"
+					style="width: 200px;" placeholder='请输入学生名字' /></td>
+			</tr>
+			<tr>
+				<td>性别：</td>
+				<td><input id="username" type="text" name="ssex"
+					style="width: 200px;" placeholder='请输入学生性别' /></td>
+			</tr>
+			<tr>
+				<td>年龄：</td>
+				<td><input id="username" type="text" name="sage"
+					style="width: 200px;" placeholder='请输入学生年龄' /></td>
+			</tr>
+			<tr>
+				<td>身高：</td>
+				<td><input id="username" type="text" name="sh"
+					style="width: 200px;" placeholder='请输入学生身高' /></td>
+			</tr>
+			<tr>
+				<td>体重：</td>
+				<td><input id="username" type="text" name="sw"
+					style="width: 200px;" placeholder='请输入学生体重' /></td>
+			</tr>
+			<tr>
+				<td>地址：</td>
+				<td><input id="username" type="text" name="sadd"
+					style="width: 200px;" placeholder='请输入学生地址' /></td>
 			</tr>
 			<tr>
 				<td>密码：</td>
-				<td><input id="password" type="password" name="apwd"
+				<td><input id="password" type="password" name="spwd"
 					style="width: 200px;" placeholder='请输入密码' /></td>
 			</tr>
 			<tr>
@@ -124,7 +149,7 @@ body {
 		&nbsp;&nbsp;
 		<button type="button" class="btn btn-success" name="backid"
 			id="backid">
-			<a href="ShowAllAdminServlet"> 返回列表</a>
+			<a href="ShowAllStudentServlet"> 返回列表</a>
 		</button>
 	</form>
 

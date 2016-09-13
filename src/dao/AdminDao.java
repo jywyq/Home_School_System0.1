@@ -12,4 +12,5 @@ public interface AdminDao {
 	public Administrator queryAdById(int aid);
 	public void updateAd(Administrator ad);
 	public void deleteAd(int aid);
+	public boolean find(int aid,String apwd);
 }

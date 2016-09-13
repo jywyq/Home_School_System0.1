@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSS3动态背景登录框代码</title>
+<title>家校通后台管理登录界面</title>
 
 <link rel="stylesheet" type="text/css" href="Css/styles.css">
 
@@ -17,15 +17,11 @@
 	<div class="wrapper">
 
 		<div class="container">
-			<h1>MOOC 后台管理 ╰(*°▽°*)╯</h1>
-			<form class="form">
-				<input type="text" placeholder="Username"> <input
-					type="password" placeholder="Password"><br>
-				<button type="submit" id="login-button"
-					onclick="window.location.href='index.html';">
-					<strong>登陆</strong>
-				</button>
-
+			<h1>家校通后台管理 ╰(*°▽°*)╯</h1>
+			<form id='my' class="form" action="AdminLoginServlet" method="post" onsubmit="return false;">
+				<input type="text" name="aid" placeholder="管理员账号"> <input
+					type="password" name ="apwd" placeholder="密码"><br>
+				<input type="submit" value = "登录" onclick="document.getElementById('my').submit()">
 			</form>
 		</div>
 
@@ -36,8 +32,6 @@
 		</ul>
 
 	</div>
-
-
 
 </body>
 </html>
