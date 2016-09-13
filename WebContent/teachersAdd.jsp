@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=gb2312"
+	pageEncoding="gb2312"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,12 +9,11 @@
 <link rel="stylesheet" type="text/css"
 	href="Css/bootstrap-responsive.css" />
 <link rel="stylesheet" type="text/css" href="Css/style.css" />
-<script type="text/javascript" src="Js/jquery2.js"></script>
-<script type="text/javascript" src="Js/jquery2.sorted.js"></script>
-<script type="text/javascript" src="Js/bootstrap.js"></script>
-<script type="text/javascript" src="Js/ckform.js"></script>
-<script type="text/javascript" src="Js/common.js"></script>
-<script type="text/javascript" src="Js/jquerypicture.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script
+	src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+<script
+	src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 
 <style type="text/css">
 body {
@@ -37,58 +36,114 @@ body {
 }
 </style>
 </head>
+
+<script type="text/javascript">
+	$().ready(function() {
+
+		//ÑéÖ¤Ö¸¶¨±íµ¥
+		$("#myform").validate({
+			//ÉèÖÃÄ¬ÈÏµÄ×´Ì¬Îªkeyup£¬Ò²¿ÉÒÔÉèÖÃÎªblur
+			event : "keyup", //´¥·¢ÑéÖ¤µÄÊÂ¼ş
+			//Éè¶¨¹æÔò
+			rules : {
+				//¶ÔÓ¦idÎª'username'µÄinput
+				username : {
+					//±ØÌîÏî
+					required : true,
+					//×î¶àºÍ×îÉÙµÄ×Ö·ûÊı
+					rangeLength : [ 4, 16 ]
+				},
+				mail : {
+					required : true,
+					//ÉùÃ÷ÕâÊÇÒ»¸öµç×ÓÓÊ¼ş
+					email : true
+				},
+				password : {
+					required : true,
+					//×îÉÙ4¸ö×Ö·û
+					minLength : 4
+				},
+				confirm_password : {
+					required : true,
+					minLength : 4,
+					// ÓëÄÄ¸öµÈÍ¬£¬ÕâÀïÊÇidÎªpasswordµÄinputµÈÍ¬
+					equalTo : "#password"
+				},
+				agree : "required"
+
+			},
+
+			//ÕâÀïÊÇÓë¹æÔò¶ÔÓ¦µÄ´íÎó´úÂë
+			messages : {
+				username : {
+					//Èç¹ûÓÃ»§ÃûÎª¿Õ£¬ÔòÏÔÊ¾ÏÂÃæµÄĞÅÏ¢
+					required : 'ÇëÊäÈëÓÃ»§Ãû',
+					//Èç¹û×Ö·û´®µÄ³¤¶È²»·ûºÏ£¬ÔòÏÔÊ¾ÏÂÃæµÄĞÅÏ¢
+					rangeLength : 'ÓÃ»§Ãû±ØĞëÔÚ4-16¸ö×Ö·ûÖ®¼ä'
+				},
+				password : {
+					required : 'ÇëÊäÈëÃÜÂë',
+					minLength : 'ÃÜÂë±ØĞë´óÓÚ4¸ö×Ö·û'
+				},
+				confirm_password : {
+					required : 'ÇëÈ·ÈÏÄãµÄÃÜÂë',
+					equalTo : 'Á½´ÎÃÜÂëÊäÈë²»Ò»ÖÂ',
+					minLength : 'ÃÜÂë±ØĞë´óÓÚ4¸ö×Ö·û'
+				},
+				agree : 'ÇëÍ¬ÒâÎÒÃÇµÄÌõ¿î',
+				mail : 'ÇëÊäÈëÓĞĞ§µÄE-MAILÕÊ»§'
+			}
+		});
+	});
+</script>
+
 <body>
-	<br>
-	<font color="#777777"><strong>è¯·å¡«å†™æ•™å¸ˆèµ„æ–™ï¼š</strong></font>
-	<form action="#" method="post" class="definewidth m20"
-		enctype="multipart/form-data">
-		<table class="table table-bordered table-hover m10"
-			style="margin-left: 10px; margin-top: 3px;">
-
-
-			<br>
+	<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<font color="#777777"><strong>Ìí¼Ó½ÌÊ¦£º</strong></font>
+	<form action="TeaAddServlet" method="post" class="definewidth m20"
+		id="myform">
+		<table style="margin-left: 10px; margin-top: 3px;">
 			<tr>
-				<td class="tableleft">ç™»å½•å</td>
-				<td><input type="text" name="TloginName" /></td>
-				<td class="tableleft">å¯†ç </td>
-				<td><input type="text" name="Tpassword" /></td>
+				<td>Ãû×Ö£º</td>
+				<td><input id="username" type="text" name="tname"
+					style="width: 200px;" placeholder='ÇëÊäÈë½ÌÊ¦Ãû×Ö' /></td>
 			</tr>
 			<tr>
-				<td class="tableleft">çœŸå®å§“å</td>
-				<td><input type="text" name="TrealName" /></td>
-				<td class="tableleft">å­¦æ ¡</td>
-				<td><input type="text" name="Tschool" /></td>
+				<td>ĞÔ±ğ£º</td>
+				<td><input id="username" type="text" name="tsex"
+					style="width: 200px;" placeholder='ÇëÊäÈë½ÌÊ¦ĞÔ±ğ' /></td>
 			</tr>
 			<tr>
-				<td class="tableleft">ç”Ÿæ—¥</td>
-				<td><input type="text" name="Tbirthday" /></td>
-				<td class="tableleft">é‚®ç®±</td>
-				<td><input type="text" name="Temail" /></td>
+				<td>ÄêÁä£º</td>
+				<td><input id="username" type="text" name="tage"
+					style="width: 200px;" placeholder='ÇëÊäÈë½ÌÊ¦ÄêÁä' /></td>
 			</tr>
-
-
+			<tr>
+				<td>µç»°£º</td>
+				<td><input id="username" type="text" name="ttel"
+					style="width: 200px;" placeholder='ÇëÊäÈëµç»°' /></td>
+			</tr>
+			<tr>
+				<td>ÃÜÂë£º</td>
+				<td><input id="password" type="password" name="tpwd"
+					style="width: 200px;" placeholder='ÇëÊäÈëÃÜÂë' /></td>
+			</tr>
+			<tr>
+				<td>È·ÈÏÃÜÂë£º</td>
+				<td><input id="confirm_password" type="password"
+					name="confirm_password" style="width: 200px;" placeholder='È·ÈÏÃÜÂë' /></td>
+			</tr>
 		</table>
-		<br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		<button type="submit" class="btn btn-primary">æäº¤</button>
+		<button style="margin-left: 5px;" type="submit"
+			class="btn btn-primary" type="button">±£&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;´æ</button>
+		&nbsp;&nbsp;
+		<button type="button" class="btn btn-success" name="backid"
+			id="backid">
+			<a href="ShowAllTeacherServlet"> ·µ»ØÁĞ±í</a>
+		</button>
 	</form>
-	<img src="" id="img0">
-
-	<script>	
-$("#GoodsPicture").change(function(){
-	var objUrl = getObjectURL(this.files[0]) ;
-	console.log("objUrl = "+objUrl) ;
-	if (objUrl) {
-		$("#img0").attr("src", objUrl) ;
-	}
-}) ;
 
 </body>
 </html>
-<script>
-   $(function (){       
-		$('#backid').click(function(){
-				window.location.href="goodsQuery.html";
-		 });
-    });
-		
-</script>
+
+

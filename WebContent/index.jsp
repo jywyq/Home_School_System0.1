@@ -258,7 +258,7 @@ body {
 					<li><a class="a" href="javascript:void(0);"
 						onClick="openurl('ShowAllStudentServlet');">学生管理</a></li>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('teacherQuery.jsp');">老师管理</a></li>
+						onClick="openurl('ShowAllTeacherServlet');">老师管理</a></li>
 					<li><a class="a" href="javascript:void(0);"
 						onClick="openurl('teacherQuery.jsp');">家长管理</a></li>
 				</ul>

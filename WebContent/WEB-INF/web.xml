@@ -104,6 +104,47 @@
     <servlet-name>DeleteStuById</servlet-name>
     <url-pattern>/DeleteStuById</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ShowAllTeacherServlet</servlet-name>
+    <servlet-class>servlet.ShowAllTeacherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowAllTeacherServlet</servlet-name>
+    <url-pattern>/ShowAllTeacherServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TeaAddServlet</servlet-name>
+    <servlet-class>servlet.TeaAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TeaAddServlet</servlet-name>
+    <url-pattern>/TeaAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryTeaById</servlet-name>
+    <servlet-class>servlet.QueryTeaById</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryTeaById</servlet-name>
+    <url-pattern>/QueryTeaById</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UpdateTeaServlet</servlet-name>
+    <servlet-class>servlet.UpdateTeaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateTeaServlet</servlet-name>
+    <url-pattern>/UpdateTeaServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>DeleteTeaById</servlet-name>
+    <servlet-class>servlet.DeleteTeaById</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteTeaById</servlet-name>
+    <url-pattern>/DeleteTeaById</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

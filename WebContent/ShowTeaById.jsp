@@ -38,38 +38,42 @@ body {
 </style>
 </head>
 <body>
-
-	<font color="#777777"><strong>教师名字：</strong></font>
-	<input type="text" name="menuname" id="menuname"
-		class="abc input-default" placeholder="" value="">&nbsp;&nbsp;
-	<button type="submit" class="btn btn-primary">查询</button>
-	&nbsp;&nbsp;
-	<button type="button" id="addnew">
-		<a href="teachersAdd.jsp">添加教师
-	</button>
-	</a>
-	<table class="table table-bordered table-hover definewidth m10"
-		id="table">
-		<tr>
-			<td>教师账号</td>
-			<td>教师名字</td>
-			<td>教师性别</td>
-			<td>教师年龄</td>
-			<td>教师电话</td>
-			<td>教师密码</td>
-		</tr>
-		<c:forEach var="list" items="${list}">
+	<form action="UpdateTeaServlet" method="post">
+		<table class="table table-bordered table-hover definewidth m10"
+			id="table">
 			<tr>
-				<td>${list.tid }</td>
-				<td>${list.tname }</td>
-				<td>${list.tsex }</td>
-				<td>${list.tage }</td>
-				<td>${list.ttel }</td>
-				<td>${list.tpwd }</td>
-				<td><a href="QueryTeaById?tid=${list.tid }">修改</a> <a
-					href="DeleteTeaById?tid=${list.tid }">删除</a></td>
+				<td>教师账号</td>
+				<td><input type="text" name="tid" value="${ad.tid }"
+					readonly="readonly"></td>
 			</tr>
-		</c:forEach>
-	</table>
+			<tr>
+				<td>教师名字</td>
+				<td><input type="text" name="tname" value="${ad.tname }"></td>
+			</tr>
+			<tr>
+				<td>教师性别</td>
+				<td><input type="text" name="tsex" value="${ad.tsex }"></td>
+			</tr>
+			<tr>
+				<td>教师年龄</td>
+				<td><input type="text" name="tage" value="${ad.tage }"></td>
+			</tr>
+			<tr>
+				<td>教师电话</td>
+				<td><input type="text" name="ttel" value="${ad.ttel }"></td>
+			</tr>
+			<tr>
+				<td>教师密码</td>
+				<td><input type="text" name="tpwd" value="${ad.tpwd }"></td>
+			</tr>
+		</table>
+		<button style="margin-left: 5px;" type="submit"
+			class="btn btn-primary" type="button">保&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;存</button>
+		&nbsp;&nbsp;
+		<button type="button" class="btn btn-success" name="backid"
+			id="backid">
+			<a href="ShowAllTeacherServlet"> 返回列表</a>
+		</button>
+	</form>
 </body>
 </html>

@@ -80,7 +80,7 @@ body {
 		&nbsp;&nbsp;
 		<button type="button" class="btn btn-success" name="backid"
 			id="backid">
-			<a href="ShowAllAdminServlet"> 返回列表</a>
+			<a href="ShowAllStudentServlet"> 返回列表</a>
 		</button>
 	</form>
 </body>

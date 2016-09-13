@@ -99,7 +99,7 @@ body {
 
 <body>
 	<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<font color="#777777"><strong>添加管理员：</strong></font>
+	<font color="#777777"><strong>添加学生：</strong></font>
 	<form action="StuAddServlet" method="post" class="definewidth m20"
 		id="myform">
 		<table style="margin-left: 10px; margin-top: 3px;">
