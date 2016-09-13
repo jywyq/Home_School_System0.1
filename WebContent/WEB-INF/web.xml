@@ -224,6 +224,46 @@
     <servlet-name>DeleteCsById</servlet-name>
     <url-pattern>/DeleteCsById</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ShowAllCourseServlet</servlet-name>
+    <servlet-class>servlet.ShowAllCourseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowAllCourseServlet</servlet-name>
+    <url-pattern>/ShowAllCourseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CAddServlet</servlet-name>
+    <servlet-class>servlet.CAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CAddServlet</servlet-name>
+    <url-pattern>/CAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryCById</servlet-name>
+    <servlet-class>servlet.QueryCById</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryCById</servlet-name>
+    <url-pattern>/QueryCById</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UpdateCServlet</servlet-name>
+    <servlet-class>servlet.UpdateCServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateCServlet</servlet-name>
+    <url-pattern>/UpdateCServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DeleteCById</servlet-name>
+    <servlet-class>servlet.DeleteCById</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteCById</servlet-name>
+    <url-pattern>/DeleteCById</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
