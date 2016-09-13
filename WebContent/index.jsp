@@ -243,7 +243,7 @@ body {
 			<div class="div3">
 				<ul>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('classQuery.jsp');">班级信息</a></li>
+						onClick="openurl('ShowAllClassServlet');">班级信息</a></li>
 					<li><a class="a" href="javascript:void(0);"
 						onClick="openurl('classQuery.jsp');">课程信息</a></li>
 

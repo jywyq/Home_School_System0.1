@@ -38,37 +38,34 @@ body {
 </style>
 </head>
 <body>
-
-	<font color="#777777"><strong>年级：</strong></font>
-	<input type="text" name="menuname" id="menuname"
-		class="abc input-default" placeholder="" value="">&nbsp;&nbsp;
-	<font color="#777777"><strong>班级：</strong></font>
-	<input type="text" name="menuname" id="menuname"
-		class="abc input-default" placeholder="" value="">&nbsp;&nbsp;
-	<button type="submit" class="btn btn-primary">查询</button>
-	&nbsp;&nbsp;
-	<button type="button" id="addnew">
-		<a href="classAdd.jsp">添加班级
-	</button>
-	</a>
-	<table class="table table-bordered table-hover definewidth m10"
-		id="table">
-		<tr>
-			<td>班级编号</td>
-			<td>班级</td>
-			<td>年级</td>
-			<td>地点</td>
-		</tr>
-		<c:forEach var="list" items="${list}">
+	<form action="UpdateCsServlet" method="post">
+		<table class="table table-bordered table-hover definewidth m10"
+			id="table">
 			<tr>
-				<td>${list.csid }</td>
-				<td>${list.classs }</td>
-				<td>${list.grade }</td>
-				<td>${list.csadd }</td>
-				<td><a href="QueryCsById?csid=${list.csid }">修改</a> <a
-					href="DeleteCsById?csid=${list.csid }">删除</a></td>
+				<td>班级编号</td>
+				<td><input type="text" name="csid" value="${ad.csid }"
+					readonly="readonly"></td>
 			</tr>
-		</c:forEach>
-	</table>
+			<tr>
+				<td>班级</td>
+				<td><input type="text" name="classs" value="${ad.classs }"></td>
+			</tr>
+			<tr>
+				<td>年级</td>
+				<td><input type="text" name="grade" value="${ad.grade }"></td>
+			</tr>
+			<tr>
+				<td>地点</td>
+				<td><input type="text" name="csadd" value="${ad.csadd }"></td>
+			</tr>
+		</table>
+		<button style="margin-left: 5px;" type="submit"
+			class="btn btn-primary" type="button">保&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;存</button>
+		&nbsp;&nbsp;
+		<button type="button" class="btn btn-success" name="backid"
+			id="backid">
+			<a href="ShowAllClassServlet"> 返回列表</a>
+		</button>
+	</form>
 </body>
 </html>

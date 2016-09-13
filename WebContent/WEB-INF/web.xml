@@ -184,6 +184,46 @@
     <servlet-name>DeleteParById</servlet-name>
     <url-pattern>/DeleteParById</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ShowAllClassServlet</servlet-name>
+    <servlet-class>servlet.ShowAllClassServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowAllClassServlet</servlet-name>
+    <url-pattern>/ShowAllClassServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CsAddServlet</servlet-name>
+    <servlet-class>servlet.CsAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CsAddServlet</servlet-name>
+    <url-pattern>/CsAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryCsById</servlet-name>
+    <servlet-class>servlet.QueryCsById</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryCsById</servlet-name>
+    <url-pattern>/QueryCsById</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UpdateCsServlet</servlet-name>
+    <servlet-class>servlet.UpdateCsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateCsServlet</servlet-name>
+    <url-pattern>/UpdateCsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DeleteCsById</servlet-name>
+    <servlet-class>servlet.DeleteCsById</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteCsById</servlet-name>
+    <url-pattern>/DeleteCsById</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

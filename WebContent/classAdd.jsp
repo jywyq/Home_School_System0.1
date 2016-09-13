@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=gb2312"
+	pageEncoding="gb2312"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,12 +9,11 @@
 <link rel="stylesheet" type="text/css"
 	href="Css/bootstrap-responsive.css" />
 <link rel="stylesheet" type="text/css" href="Css/style.css" />
-<script type="text/javascript" src="Js/jquery2.js"></script>
-<script type="text/javascript" src="Js/jquery2.sorted.js"></script>
-<script type="text/javascript" src="Js/bootstrap.js"></script>
-<script type="text/javascript" src="Js/ckform.js"></script>
-<script type="text/javascript" src="Js/common.js"></script>
-<script type="text/javascript" src="Js/jquerypicture.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script
+	src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+<script
+	src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 
 <style type="text/css">
 body {
@@ -37,36 +36,96 @@ body {
 }
 </style>
 </head>
+
+<script type="text/javascript">
+	$().ready(function() {
+
+		//ÑéÖ¤Ö¸¶¨±íµ¥
+		$("#myform").validate({
+			//ÉèÖÃÄ¬ÈÏµÄ×´Ì¬Îªkeyup£¬Ò²¿ÉÒÔÉèÖÃÎªblur
+			event : "keyup", //´¥·¢ÑéÖ¤µÄÊÂ¼ş
+			//Éè¶¨¹æÔò
+			rules : {
+				//¶ÔÓ¦idÎª'username'µÄinput
+				username : {
+					//±ØÌîÏî
+					required : true,
+					//×î¶àºÍ×îÉÙµÄ×Ö·ûÊı
+					rangeLength : [ 4, 16 ]
+				},
+				mail : {
+					required : true,
+					//ÉùÃ÷ÕâÊÇÒ»¸öµç×ÓÓÊ¼ş
+					email : true
+				},
+				password : {
+					required : true,
+					//×îÉÙ4¸ö×Ö·û
+					minLength : 4
+				},
+				confirm_password : {
+					required : true,
+					minLength : 4,
+					// ÓëÄÄ¸öµÈÍ¬£¬ÕâÀïÊÇidÎªpasswordµÄinputµÈÍ¬
+					equalTo : "#password"
+				},
+				agree : "required"
+
+			},
+
+			//ÕâÀïÊÇÓë¹æÔò¶ÔÓ¦µÄ´íÎó´úÂë
+			messages : {
+				username : {
+					//Èç¹ûÓÃ»§ÃûÎª¿Õ£¬ÔòÏÔÊ¾ÏÂÃæµÄĞÅÏ¢
+					required : 'ÇëÊäÈëÓÃ»§Ãû',
+					//Èç¹û×Ö·û´®µÄ³¤¶È²»·ûºÏ£¬ÔòÏÔÊ¾ÏÂÃæµÄĞÅÏ¢
+					rangeLength : 'ÓÃ»§Ãû±ØĞëÔÚ4-16¸ö×Ö·ûÖ®¼ä'
+				},
+				password : {
+					required : 'ÇëÊäÈëÃÜÂë',
+					minLength : 'ÃÜÂë±ØĞë´óÓÚ4¸ö×Ö·û'
+				},
+				confirm_password : {
+					required : 'ÇëÈ·ÈÏÄãµÄÃÜÂë',
+					equalTo : 'Á½´ÎÃÜÂëÊäÈë²»Ò»ÖÂ',
+					minLength : 'ÃÜÂë±ØĞë´óÓÚ4¸ö×Ö·û'
+				},
+				agree : 'ÇëÍ¬ÒâÎÒÃÇµÄÌõ¿î',
+				mail : 'ÇëÊäÈëÓĞĞ§µÄE-MAILÕÊ»§'
+			}
+		});
+	});
+</script>
+
 <body>
-	<br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-	<font color="#777777"><strong>æ·»åŠ å¤§ç±»ï¼š</strong></font>
-	<form action="#" method="post" class="definewidth m20"
-		enctype="multipart/form-data">
+	<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<font color="#777777"><strong>Ìí¼Ó°à¼¶£º</strong></font>
+	<form action="CsAddServlet" method="post" class="definewidth m20"
+		id="myform">
 		<table style="margin-left: 10px; margin-top: 3px;">
 			<tr>
-				<td>å¤§ç±»åç§°ï¼š</td>
-				<td><input type="text" name="classname" style="width: 400px;"
-					placeholder='è¯·è¾“å…¥å¤§ç±»åç§°' /></td>
+				<td>°à¼¶£º</td>
+				<td><input id="username" type="text" name="classs"
+					style="width: 200px;" placeholder='ÇëÊäÈë°à¼¶' /></td>
 			</tr>
 			<tr>
-				<td>ä»‹ç»ï¼š</td>
-				<td><input type="text" name="classname"
-					style="height: 100px; width: 400px;" placeholder='è¯·è¾“å…¥å¤§ç±»è¯¦æƒ…' /></td>
+				<td>Äê¼¶£º</td>
+				<td><input id="username" type="text" name="grade"
+					style="width: 200px;" placeholder='ÇëÊäÈëÄê¼¶' /></td>
 			</tr>
-
 			<tr>
-				<td></td>
-				<td>
-					<button style="margin-left: 5px;" type="submit"
-						class="btn btn-primary" type="button">ä¿&nbsp&nbsp&nbsp&nbsp&nbsp&nbspå­˜</button>
-					&nbsp;&nbsp;
-					<button type="button" class="btn btn-success" name="backid"
-						id="backid">
-						<a href="classQuery.html"> è¿”å›åˆ—è¡¨</a>
-					</button>
-				</td>
+				<td>µØµã£º</td>
+				<td><input id="username" type="text" name="csadd"
+					style="width: 200px;" placeholder='ÇëÊäÈëµØµã' /></td>
 			</tr>
 		</table>
+		<button style="margin-left: 5px;" type="submit"
+			class="btn btn-primary" type="button">±£&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;´æ</button>
+		&nbsp;&nbsp;
+		<button type="button" class="btn btn-success" name="backid"
+			id="backid">
+			<a href="ShowAllClassServlet"> ·µ»ØÁĞ±í</a>
+		</button>
 	</form>
 
 </body>
