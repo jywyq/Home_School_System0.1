@@ -5,10 +5,10 @@
 <head>
 <title></title>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="Css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../Css/bootstrap.css" />
 <link rel="stylesheet" type="text/css"
-	href="Css/bootstrap-responsive.css" />
-<link rel="stylesheet" type="text/css" href="Css/style.css" />
+	href="../Css/bootstrap-responsive.css" />
+<link rel="stylesheet" type="text/css" href="../Css/style.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script
 	src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
@@ -99,19 +99,44 @@ body {
 
 <body>
 	<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<font color="#777777"><strong>添加班级：</strong></font>
-	<form action="CAddServlet" method="post" class="definewidth m20"
+	<font color="#777777"><strong>添加家长：</strong></font>
+	<form action="../ParAddServlet" method="post" class="definewidth m20"
 		id="myform">
 		<table style="margin-left: 10px; margin-top: 3px;">
 			<tr>
-				<td>课程名：</td>
-				<td><input id="username" type="text" name="cname"
-					style="width: 200px;" placeholder='请输入课程名' /></td>
+				<td>名字：</td>
+				<td><input id="username" type="text" name="pname"
+					style="width: 200px;" placeholder='请输入家长名字' /></td>
 			</tr>
 			<tr>
-				<td>开设学期：</td>
-				<td><input id="username" type="text" name="cterm"
-					style="width: 200px;" placeholder='请输入开设学期' /></td>
+				<td>性别：</td>
+				<td><input id="username" type="text" name="psex"
+					style="width: 200px;" placeholder='请输入家长性别' /></td>
+			</tr>
+			<tr>
+				<td>年龄：</td>
+				<td><input id="username" type="text" name="page"
+					style="width: 200px;" placeholder='请输入家长年龄' /></td>
+			</tr>
+			<tr>
+				<td>电话：</td>
+				<td><input id="username" type="text" name="ptel"
+					style="width: 200px;" placeholder='请输入电话' /></td>
+			</tr>
+			<tr>
+				<td>单位：</td>
+				<td><input id="username" type="text" name="pcpy"
+					style="width: 200px;" placeholder='请输入工作单位' /></td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td><input id="password" type="password" name="ppwd"
+					style="width: 200px;" placeholder='请输入密码' /></td>
+			</tr>
+			<tr>
+				<td>确认密码：</td>
+				<td><input id="confirm_password" type="password"
+					name="confirm_password" style="width: 200px;" placeholder='确认密码' /></td>
 			</tr>
 		</table>
 		<button style="margin-left: 5px;" type="submit"
@@ -119,7 +144,7 @@ body {
 		&nbsp;&nbsp;
 		<button type="button" class="btn btn-success" name="backid"
 			id="backid">
-			<a href="ShowAllCourseServlet"> 返回列表</a>
+			<a href="../ShowAllParentServlet"> 返回列表</a>
 		</button>
 	</form>
 

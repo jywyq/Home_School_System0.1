@@ -11,10 +11,10 @@
 <link rel="stylesheet" type="text/css"
 	href="Css/bootstrap-responsive.css" />
 <link rel="stylesheet" type="text/css" href="Css/style.css" />
-<script type="text/javascript" src="js/jquery2.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/ckform.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="../js/jquery2.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/ckform.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
 
 <style type="text/css">
 body {
@@ -38,21 +38,37 @@ body {
 </style>
 </head>
 <body>
-	<form action="UpdateCServlet" method="post">
+	<form action="UpdateParServlet" method="post">
 		<table class="table table-bordered table-hover definewidth m10"
 			id="table">
 			<tr>
-				<td>课程编号</td>
-				<td><input type="text" name="cid" value="${ad.cid }"
+				<td>家长账号</td>
+				<td><input type="text" name="pid" value="${ad.pid }"
 					readonly="readonly"></td>
 			</tr>
 			<tr>
-				<td>课程名</td>
-				<td><input type="text" name="cname" value="${ad.cname }"></td>
+				<td>家长名字</td>
+				<td><input type="text" name="pname" value="${ad.pname }"></td>
 			</tr>
 			<tr>
-				<td>开设学期</td>
-				<td><input type="text" name="cterm" value="${ad.cterm }"></td>
+				<td>家长性别</td>
+				<td><input type="text" name="psex" value="${ad.psex }"></td>
+			</tr>
+			<tr>
+				<td>家长年龄</td>
+				<td><input type="text" name="page" value="${ad.page }"></td>
+			</tr>
+			<tr>
+				<td>家长电话</td>
+				<td><input type="text" name="ptel" value="${ad.ptel }"></td>
+			</tr>
+			<tr>
+				<td>工作单位</td>
+				<td><input type="text" name="pcpy" value="${ad.pcpy }"></td>
+			</tr>
+			<tr>
+				<td>密码</td>
+				<td><input type="text" name="ppwd" value="${ad.ppwd }"></td>
 			</tr>
 		</table>
 		<button style="margin-left: 5px;" type="submit"
@@ -60,7 +76,7 @@ body {
 		&nbsp;&nbsp;
 		<button type="button" class="btn btn-success" name="backid"
 			id="backid">
-			<a href="ShowAllCourseServlet"> 返回列表</a>
+			<a href="ShowAllParentServlet"> 返回列表</a>
 		</button>
 	</form>
 </body>

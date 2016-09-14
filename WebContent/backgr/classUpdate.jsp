@@ -9,12 +9,12 @@
 <link rel="stylesheet" type="text/css"
 	href="Css/bootstrap-responsive.css" />
 <link rel="stylesheet" type="text/css" href="Css/style.css" />
-<script type="text/javascript" src="Js/jquery2.js"></script>
-<script type="text/javascript" src="Js/jquery2.sorted.js"></script>
-<script type="text/javascript" src="Js/bootstrap.js"></script>
-<script type="text/javascript" src="Js/ckform.js"></script>
-<script type="text/javascript" src="Js/common.js"></script>
-<script type="text/javascript" src="Js/jquerypicture.js"></script>
+<script type="text/javascript" src="../Js/jquery2.js"></script>
+<script type="text/javascript" src="../Js/jquery2.sorted.js"></script>
+<script type="text/javascript" src="../Js/bootstrap.js"></script>
+<script type="text/javascript" src="../Js/ckform.js"></script>
+<script type="text/javascript" src="../Js/common.js"></script>
+<script type="text/javascript" src="../Js/jquerypicture.js"></script>
 
 <style type="text/css">
 body {

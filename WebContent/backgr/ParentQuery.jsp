@@ -11,10 +11,10 @@
 <link rel="stylesheet" type="text/css"
 	href="Css/bootstrap-responsive.css" />
 <link rel="stylesheet" type="text/css" href="Css/style.css" />
-<script type="text/javascript" src="js/jquery2.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/ckform.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="../js/jquery2.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/ckform.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
 
 <style type="text/css">
 body {
@@ -39,29 +39,37 @@ body {
 </head>
 <body>
 
-	<font color="#777777"><strong>管理员昵称：</strong></font>
+	<font color="#777777"><strong>家长名字：</strong></font>
 	<input type="text" name="menuname" id="menuname"
 		class="abc input-default" placeholder="" value="">&nbsp;&nbsp;
 	<button type="submit" class="btn btn-primary">查询</button>
 	&nbsp;&nbsp;
 	<button type="button" id="addnew">
-		<a href="adminAdd.jsp">添加管理员 
+		<a href="backgr/ParentAdd.jsp">添加家长
 	</button>
 	</a>
 	<table class="table table-bordered table-hover definewidth m10"
 		id="table">
 		<tr>
-			<td>管理员昵称</td>
-			<td>管理员账号</td>
-			<td>管理员密码</td>
+			<td>家长账号</td>
+			<td>家长名字</td>
+			<td>家长性别</td>
+			<td>家长年龄</td>
+			<td>家长电话</td>
+			<td>所在单位</td>
+			<td>密码</td>
 		</tr>
 		<c:forEach var="list" items="${list}">
 			<tr>
-				<td>${list.aname }</td>
-				<td>${list.aid }</td>
-				<td>${list.apwd }</td>
-				<td><a href="QueryAdminById?aid=${list.aid }">修改</a> <a
-					href="DeleteAdminById?aid=${list.aid }">删除</a></td>
+				<td>${list.pid }</td>
+				<td>${list.pname }</td>
+				<td>${list.psex }</td>
+				<td>${list.page }</td>
+				<td>${list.ptel }</td>
+				<td>${list.pcpy }</td>
+				<td>${list.ppwd }</td>
+				<td><a href="QueryParById?pid=${list.pid }">修改</a> <a
+					href="DeleteParById?pid=${list.pid }">删除</a></td>
 			</tr>
 		</c:forEach>
 	</table>

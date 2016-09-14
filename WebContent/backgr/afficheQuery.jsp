@@ -10,15 +10,15 @@
 <link
 	href="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css"
 	rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="Css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../Css/bootstrap.css" />
 <link rel="stylesheet" type="text/css"
-	href="Css/bootstrap-responsive.css" />
-<link rel="stylesheet" type="text/css" href="Css/style.css" />
-<script type="text/javascript" src="Js/jquery2.js"></script>
-<script type="text/javascript" src="Js/jquery2.sorted.js"></script>
-<script type="text/javascript" src="Js/bootstrap.js"></script>
-<script type="text/javascript" src="Js/ckform.js"></script>
-<script type="text/javascript" src="Js/common.js"></script>
+	href="../Css/bootstrap-responsive.css" />
+<link rel="stylesheet" type="text/css" href="../Css/style.css" />
+<script type="text/javascript" src="../Js/jquery2.js"></script>
+<script type="text/javascript" src="../Js/jquery2.sorted.js"></script>
+<script type="text/javascript" src="../Js/bootstrap.js"></script>
+<script type="text/javascript" src="../Js/ckform.js"></script>
+<script type="text/javascript" src="../Js/common.js"></script>
 
 <style type="text/css">
 body {

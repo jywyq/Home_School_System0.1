@@ -7,8 +7,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>家校通后台管理登录界面</title>
-
-<link rel="stylesheet" type="text/css" href="Css/styles.css">
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+	String css=basePath+"Css/styles.css";
+	//System.out.println(css);
+%>
+<link rel="stylesheet" type="text/css" href="<%=css%>">
 
 </head>
 <body>

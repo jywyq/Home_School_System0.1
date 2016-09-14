@@ -11,10 +11,10 @@
 <link rel="stylesheet" type="text/css"
 	href="Css/bootstrap-responsive.css" />
 <link rel="stylesheet" type="text/css" href="Css/style.css" />
-<script type="text/javascript" src="js/jquery2.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/ckform.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="../js/jquery2.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/ckform.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
 
 <style type="text/css">
 body {
@@ -48,25 +48,23 @@ body {
 	<button type="submit" class="btn btn-primary">查询</button>
 	&nbsp;&nbsp;
 	<button type="button" id="addnew">
-		<a href="classAdd.jsp">添加班级
+		<a href="backgr/CourseAdd.jsp">添加班级
 	</button>
 	</a>
 	<table class="table table-bordered table-hover definewidth m10"
 		id="table">
 		<tr>
-			<td>班级编号</td>
-			<td>班级</td>
-			<td>年级</td>
-			<td>地点</td>
+			<td>课程编号</td>
+			<td>课程名</td>
+			<td>开设学期</td>
 		</tr>
 		<c:forEach var="list" items="${list}">
 			<tr>
-				<td>${list.csid }</td>
-				<td>${list.classs }</td>
-				<td>${list.grade }</td>
-				<td>${list.csadd }</td>
-				<td><a href="QueryCsById?csid=${list.csid }">修改</a> <a
-					href="DeleteCsById?csid=${list.csid }">删除</a></td>
+				<td>${list.cid }</td>
+				<td>${list.cname }</td>
+				<td>${list.cterm }</td>
+				<td><a href="QueryCById?cid=${list.cid }">修改</a> <a
+					href="DeleteCById?cid=${list.cid }">删除</a></td>
 			</tr>
 		</c:forEach>
 	</table>

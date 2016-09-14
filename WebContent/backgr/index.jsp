@@ -223,7 +223,7 @@ body {
 			<h3>家校通网站后台管理系统</h3>
 		</div>
 		<div class="fr top-link">
-			<a href="admin_list.jsp" target="mainCont" title="DeathGhost"><i
+			<a href="backgr/admin_list.jsp" target="mainCont" title="DeathGhost"><i
 				class="adminIcon"></i><span>管理员：王禹秋</span></a>
 		</div>
 	</div>
@@ -271,9 +271,9 @@ body {
 			<div class="div3">
 				<ul>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('afficheQuery.jsp');">查看公告</a></li>
+						onClick="openurl('backgr/afficheQuery.jsp');">查看公告</a></li>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('afficheAdd.jsp');">添加公告</a></li>
+						onClick="openurl('backgr/afficheAdd.jsp');">添加公告</a></li>
 				</ul>
 			</div>
 			<div class="div2">
@@ -283,7 +283,7 @@ body {
 					onClick="openurl('ShowAllAdminServlet');"> 管理员 </a>
 
 			</div>
-			<a class="a1" href="login.jsp"><div class="div2">
+			<a class="a1" href="backgr/login.jsp"><div class="div2">
 					<div class="tcht"></div>
 					退出后台
 				</div></a>

@@ -11,10 +11,10 @@
 <link rel="stylesheet" type="text/css"
 	href="Css/bootstrap-responsive.css" />
 <link rel="stylesheet" type="text/css" href="Css/style.css" />
-<script type="text/javascript" src="js/jquery2.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/ckform.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="../js/jquery2.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/ckform.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
 
 <style type="text/css">
 body {
@@ -38,25 +38,21 @@ body {
 </style>
 </head>
 <body>
-	<form action="UpdateCsServlet" method="post">
+	<form action="UpdateCServlet" method="post">
 		<table class="table table-bordered table-hover definewidth m10"
 			id="table">
 			<tr>
-				<td>班级编号</td>
-				<td><input type="text" name="csid" value="${ad.csid }"
+				<td>课程编号</td>
+				<td><input type="text" name="cid" value="${ad.cid }"
 					readonly="readonly"></td>
 			</tr>
 			<tr>
-				<td>班级</td>
-				<td><input type="text" name="classs" value="${ad.classs }"></td>
+				<td>课程名</td>
+				<td><input type="text" name="cname" value="${ad.cname }"></td>
 			</tr>
 			<tr>
-				<td>年级</td>
-				<td><input type="text" name="grade" value="${ad.grade }"></td>
-			</tr>
-			<tr>
-				<td>地点</td>
-				<td><input type="text" name="csadd" value="${ad.csadd }"></td>
+				<td>开设学期</td>
+				<td><input type="text" name="cterm" value="${ad.cterm }"></td>
 			</tr>
 		</table>
 		<button style="margin-left: 5px;" type="submit"
@@ -64,7 +60,7 @@ body {
 		&nbsp;&nbsp;
 		<button type="button" class="btn btn-success" name="backid"
 			id="backid">
-			<a href="ShowAllClassServlet"> 返回列表</a>
+			<a href="ShowAllCourseServlet"> 返回列表</a>
 		</button>
 	</form>
 </body>

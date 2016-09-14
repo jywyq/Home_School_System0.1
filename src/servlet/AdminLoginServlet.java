@@ -44,8 +44,8 @@ public class AdminLoginServlet extends HttpServlet {
 		int aid = Integer.parseInt(request.getParameter("aid"));// 获得页面传递的empno
 		String apwd = request.getParameter("apwd");
 		AdminDao dao = new AdminDaoImp();
-		if(dao.find(aid,apwd))response.sendRedirect("index.jsp");// 调用实现类中的查询方法
-		else response.sendRedirect("error.jsp");// 重定向到显示全部员工信息页面
+		if(dao.find(aid,apwd))response.sendRedirect("backgr/index.jsp");// 调用实现类中的查询方法
+		else response.sendRedirect("backgr/error.jsp");// 重定向到显示全部员工信息页面
 		out.flush();
 		out.close();
 	}

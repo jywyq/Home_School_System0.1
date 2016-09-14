@@ -11,10 +11,10 @@
 <link rel="stylesheet" type="text/css"
 	href="Css/bootstrap-responsive.css" />
 <link rel="stylesheet" type="text/css" href="Css/style.css" />
-<script type="text/javascript" src="js/jquery2.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/ckform.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="../js/jquery2.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/ckform.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
 
 <style type="text/css">
 body {
@@ -38,37 +38,25 @@ body {
 </style>
 </head>
 <body>
-	<form action="UpdateParServlet" method="post">
+	<form action="UpdateCsServlet" method="post">
 		<table class="table table-bordered table-hover definewidth m10"
 			id="table">
 			<tr>
-				<td>家长账号</td>
-				<td><input type="text" name="pid" value="${ad.pid }"
+				<td>班级编号</td>
+				<td><input type="text" name="csid" value="${ad.csid }"
 					readonly="readonly"></td>
 			</tr>
 			<tr>
-				<td>家长名字</td>
-				<td><input type="text" name="pname" value="${ad.pname }"></td>
+				<td>班级</td>
+				<td><input type="text" name="classs" value="${ad.classs }"></td>
 			</tr>
 			<tr>
-				<td>家长性别</td>
-				<td><input type="text" name="psex" value="${ad.psex }"></td>
+				<td>年级</td>
+				<td><input type="text" name="grade" value="${ad.grade }"></td>
 			</tr>
 			<tr>
-				<td>家长年龄</td>
-				<td><input type="text" name="page" value="${ad.page }"></td>
-			</tr>
-			<tr>
-				<td>家长电话</td>
-				<td><input type="text" name="ptel" value="${ad.ptel }"></td>
-			</tr>
-			<tr>
-				<td>工作单位</td>
-				<td><input type="text" name="pcpy" value="${ad.pcpy }"></td>
-			</tr>
-			<tr>
-				<td>密码</td>
-				<td><input type="text" name="ppwd" value="${ad.ppwd }"></td>
+				<td>地点</td>
+				<td><input type="text" name="csadd" value="${ad.csadd }"></td>
 			</tr>
 		</table>
 		<button style="margin-left: 5px;" type="submit"
@@ -76,7 +64,7 @@ body {
 		&nbsp;&nbsp;
 		<button type="button" class="btn btn-success" name="backid"
 			id="backid">
-			<a href="ShowAllParentServlet"> 返回列表</a>
+			<a href="ShowAllClassServlet"> 返回列表</a>
 		</button>
 	</form>
 </body>

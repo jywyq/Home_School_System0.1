@@ -35,7 +35,7 @@ public class QueryParById extends HttpServlet {
 		ad = dao.queryAdById(pid);// 调用实现类中根据id查询的方法
 		request.setAttribute("ad", ad);// 把获得的对象放入request对象中
 		// 转发到现实单条记录的页面
-		request.getRequestDispatcher("ShowParById.jsp").forward(request, response);
+		request.getRequestDispatcher("backgr/ShowParById.jsp").forward(request, response);
 		out.flush();
 		out.close();
 	}

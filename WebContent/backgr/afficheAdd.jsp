@@ -5,16 +5,16 @@
 <head>
 <title></title>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="Css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../Css/bootstrap.css" />
 <link rel="stylesheet" type="text/css"
-	href="Css/bootstrap-responsive.css" />
-<link rel="stylesheet" type="text/css" href="Css/style.css" />
-<script type="text/javascript" src="Js/jquery.js"></script>
-<script type="text/javascript" src="Js/jquery.sorted.js"></script>
-<script type="text/javascript" src="Js/bootstrap.js"></script>
-<script type="text/javascript" src="Js/ckform.js"></script>
-<script type="text/javascript" src="Js/common.js"></script>
-<script type="text/javascript" src="js/showdate.js"></script>
+	href="../Css/bootstrap-responsive.css" />
+<link rel="stylesheet" type="text/css" href="../Css/style.css" />
+<script type="text/javascript" src="../Js/jquery.js"></script>
+<script type="text/javascript" src="../Js/jquery.sorted.js"></script>
+<script type="text/javascript" src="../Js/bootstrap.js"></script>
+<script type="text/javascript" src="../Js/ckform.js"></script>
+<script type="text/javascript" src="../Js/common.js"></script>
+<script type="text/javascript" src="../js/showdate.js"></script>
 <style type="text/css">
 body {
 	font-size: 20px;
@@ -73,9 +73,10 @@ body {
 			<td class="tableleft"></td>
 			<td>
 				<button style="margin-left: 180px;" type="submit"
-					class="btn btn-primary" type="button">确认修改</button>&nbsp;&nbsp;
-				<button type="button" class="btn btn-success" name="backid"
-					id="backid" onclick=javascrtpt:jump();>返回列表</button>
+					class="btn btn-primary" type="button">保存</button>&nbsp;&nbsp;
+				<button type="button">
+					<a href="afficheQuery.html">返回列表</a>
+				</button>
 			</td>
 		</tr>
 	</table>
