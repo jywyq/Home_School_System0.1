@@ -264,7 +264,15 @@
     <servlet-name>DeleteCById</servlet-name>
     <url-pattern>/DeleteCById</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <servlet-class>servlet.UserLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <url-pattern>/UserLoginServlet</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
-    <welcome-file>backgr/login.jsp</welcome-file>
+    <welcome-file>frnt/login.jsp</welcome-file>
   </welcome-file-list>
 </web-app>

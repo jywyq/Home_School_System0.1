@@ -24,7 +24,7 @@
 
 		<div class="container">
 			<h1>家校通后台管理 ╰(*°▽°*)╯</h1>
-			<form id='my' class="form" action="AdminLoginServlet" method="post" onsubmit="return false;">
+			<form id='my' class="form" action="../AdminLoginServlet" method="post" onsubmit="return false;">
 				<input type="text" name="aid" placeholder="管理员账号"> <input
 					type="password" name ="apwd" placeholder="密码"><br>
 				<input type="submit" value = "登录" onclick="document.getElementById('my').submit()">
