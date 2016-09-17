@@ -288,6 +288,46 @@
     <servlet-name>NAddServlet</servlet-name>
     <url-pattern>/NAddServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryNById</servlet-name>
+    <servlet-class>servlet.QueryNById</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryNById</servlet-name>
+    <url-pattern>/QueryNById</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UpdateNServlet</servlet-name>
+    <servlet-class>servlet.UpdateNServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateNServlet</servlet-name>
+    <url-pattern>/UpdateNServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DeleteNById</servlet-name>
+    <servlet-class>servlet.DeleteNById</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteNById</servlet-name>
+    <url-pattern>/DeleteNById</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ShowNById</servlet-name>
+    <servlet-class>servlet.ShowNById</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowNById</servlet-name>
+    <url-pattern>/ShowNById</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ShowAllNoticeServlet2</servlet-name>
+    <servlet-class>servlet.ShowAllNoticeServlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowAllNoticeServlet2</servlet-name>
+    <url-pattern>/ShowAllNoticeServlet2</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>frnt/login.jsp</welcome-file>
   </welcome-file-list>

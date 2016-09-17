@@ -91,9 +91,7 @@
 			<td width="44"><img src="<%=basePath%>images\pic_03.jpg" width="40" height="40" alt="" style="margin: 3px;"></td>
 			<td><span style="color: #307d74;">${list.title }</span></td>
 			<td>${list.txt }</td>
-			<td width="5%"><div class="mian_b_icon_04"><a href="QueryNById?nid=${list.nid }">修改</a></div></td>
 			<td width="5%"><div class="mian_b_icon_04"><a href="ShowNById?nid=${list.nid }">查看</a></div></td>
-			<td width="5%"><div class="mian_b_icon_04"><a href="DeleteNById?nid=${list.nid }">删除</a></div></td>
 		</tr>
 	</c:forEach>
 <td class="mian_b_bg_lm">

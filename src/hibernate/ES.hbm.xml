@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2016-9-17 10:53:47 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 2016-9-17 23:20:30 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <class name="hibernate.ES" table="e_s" catalog="school_home_system">
         <id name="sid" type="java.lang.Integer">

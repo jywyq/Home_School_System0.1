@@ -75,7 +75,7 @@ function srcchange(id){
     }
     else if(id=="hr16")
     {
-    document.getElementById("mainFrame").src="<%=basePath%>notice/NoticeShow.html";
+    document.getElementById("mainFrame").src="ShowAllNoticeServlet2";
     document.getElementById("dTitle").style.display="none";
     }
     else if(id=="hr17")
