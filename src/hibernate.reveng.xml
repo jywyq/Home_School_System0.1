@@ -2,9 +2,11 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
+  <table-filter match-schema="school_home_system" match-name=".*"/>
   <table-filter match-catalog="school_home_system" match-name="administrator"/>
   <table-filter match-catalog="school_home_system" match-name="e_c"/>
   <table-filter match-catalog="school_home_system" match-name="e_cs"/>
+  <table-filter match-catalog="school_home_system" match-name="e_n"/>
   <table-filter match-catalog="school_home_system" match-name="e_p"/>
   <table-filter match-catalog="school_home_system" match-name="e_s"/>
   <table-filter match-catalog="school_home_system" match-name="e_t"/>

@@ -272,6 +272,22 @@
     <servlet-name>UserLoginServlet</servlet-name>
     <url-pattern>/UserLoginServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ShowAllNoticeServlet</servlet-name>
+    <servlet-class>servlet.ShowAllNoticeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowAllNoticeServlet</servlet-name>
+    <url-pattern>/ShowAllNoticeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>NAddServlet</servlet-name>
+    <servlet-class>servlet.NAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NAddServlet</servlet-name>
+    <url-pattern>/NAddServlet</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>frnt/login.jsp</welcome-file>
   </welcome-file-list>

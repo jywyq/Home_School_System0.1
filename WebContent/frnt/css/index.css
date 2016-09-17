@@ -644,7 +644,12 @@ table th {
 	border: 1px solid #c1c1c1;
 	line-height: 20px;
 }
-
+.input_txt {
+	width: 500px;
+	height: 400px;
+	border: 1px solid #c1c1c1;
+	line-height: 20px;
+}
 .input_02 {
 	width: 570px;
 	height: 56px;

@@ -1,4 +1,4 @@
-<%@ page language="java" import = "java.lang.*" contentType="text/html; charset=UTF-8"
+<%@ page language="java" import = "java.util.*" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
@@ -80,7 +80,7 @@ function srcchange(id){
     }
     else if(id=="hr17")
     {
-      document.getElementById("mainFrame").src="<%=basePath%>notice/Notice.html";
+      document.getElementById("mainFrame").src="ShowAllNoticeServlet";
       document.getElementById("dTitle").style.display="none";
     }
     else if(id=="hr18")
@@ -458,8 +458,18 @@ body,td,th {
 <div class="left_r1" onmousemove="show(2)" onmouseout="hidden1(2)" id="2">
 <div class="left_r" onmousemove="show(2)" onmouseout="hidden1(2)">
 <ul>
-<li><a onclick="srcchange('hr17')" style="cursor: hand">公告管理</a></li>
-<li><a onclick="srcchange('hr16')" style="cursor: hand">公告查看</a></li>
+<c:choose>
+ <c:when test="${requestScope.tp== '1'}">
+	<li><a onclick="srcchange('hr16')" style="cursor: hand">公告查看</a></li>
+ </c:when> 
+ <c:when test="${requestScope.tp== '2'}">
+ <li><a onclick="srcchange('hr17')" style="cursor: hand">公告管理</a></li>
+ <li><a onclick="srcchange('hr16')" style="cursor: hand">公告查看</a></li>
+ </c:when> 
+ <c:when test="${requestScope.tp== '3'}">
+	<li><a onclick="srcchange('hr16')" style="cursor: hand">公告查看</a></li>
+ </c:when>
+</c:choose>
 </ul>
 </div>
 </div>
@@ -620,7 +630,7 @@ body,td,th {
 </div>
 <div class="side_02">
 <ul>
-<li class="y_css" id="xx10"><a href="../zhanshi_web/index.htm" target="_blank">
+<li class="y_css" id="xx10"><a href="<%=basePath%>login.jsp" target="_blank">
 <p class="icon_08">
 退出系统</p>
 </a></li>
@@ -631,8 +641,6 @@ body,td,th {
 <div id="dTitle" style="float:left; margin-left:30px;">
 <img src='<%=basePath%>images/shouye.jpg' alt='' style='margin-top:5px'>
 
-
-  
 
 </div>
 <div style="text-align: right; margin-right: 15px; float: right">

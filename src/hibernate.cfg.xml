@@ -26,6 +26,7 @@
         <mapping resource="hibernate/EC.hbm.xml" />
         <mapping resource="hibernate/ES.hbm.xml" />
         <mapping resource="hibernate/ET.hbm.xml" />
+        <mapping resource="hibernate/EN.hbm.xml" />
         <mapping resource="hibernate/RTeach.hbm.xml" />
     </session-factory>
 </hibernate-configuration>
