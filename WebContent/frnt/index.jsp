@@ -126,9 +126,15 @@ function srcchange(id){
     document.getElementById("dTitle").style.display="none";
     }
     
-    else if(id=="hr4")
+    else if(id=="hr401")
     {
-        document.getElementById("mainFrame").src="<%=basePath%>knowledge/KnowLedgeClass.html";
+        document.getElementById("mainFrame").src="<%=basePath%>checkin/ShowAllCk.jsp";
+         document.getElementById("dTitle").innerHTML="<img src='<%=basePath%>images/itemdangan' alt='' style='margin-top:5px'/>";
+        document.getElementById("dTitle").style.display="block";
+    }
+    else if(id=="hr402")
+    {
+        document.getElementById("mainFrame").src="CkServlet?sid=${id}";
          document.getElementById("dTitle").innerHTML="<img src='<%=basePath%>images/itemdangan' alt='' style='margin-top:5px'/>";
         document.getElementById("dTitle").style.display="block";
     }
@@ -490,12 +496,10 @@ body,td,th {
 <ul>
 <c:choose>
  <c:when test="${requestScope.tp== '1'}">
-	<li><a onclick="srcchange('hr4');" style="cursor: hand">学生签到</a></li>
- </c:when> 
- <c:when test="${requestScope.tp== '2' || requestScope.tp== '3'}">
-	<li><a onclick="srcchange('hr4');" style="cursor: hand">查看签到表</a></li>
+	<li><a onclick="srcchange('hr402');" style="cursor: hand">学生签到</a></li>
  </c:when> 
 </c:choose>
+ <li><a onclick="srcchange('hr401');" style="cursor: hand">查看签到表</a></li>
 </ul>
 </div>
 </div>
@@ -666,7 +670,7 @@ body,td,th {
 </table>
 </div>
 <div style="text-align:center;">
-<p>来源:<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
+<p>网页样式来源:<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
 </div>
 </body>
 </html>

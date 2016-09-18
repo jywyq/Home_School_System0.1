@@ -368,6 +368,14 @@
     <servlet-name>QueryStuByPid</servlet-name>
     <url-pattern>/QueryStuByPid</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>CkServlet</servlet-name>
+    <servlet-class>servlet.CkServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CkServlet</servlet-name>
+    <url-pattern>/CkServlet</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>frnt/login.jsp</welcome-file>
   </welcome-file-list>

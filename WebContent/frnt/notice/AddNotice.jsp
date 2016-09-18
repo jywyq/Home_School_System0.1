@@ -21,7 +21,7 @@
 <p>
 公告类别</p>
 </a></li>
-<li><a href="Notice.html">
+<li><a href="../../ShowAllNoticeServlet">
 <p>
 公告管理</p>
 </a></li>
@@ -68,7 +68,7 @@
 	&nbsp;&nbsp;
 <button type="button" name="backid"
 	id="backid">
-	<a href="../ShowAllNoticeServlet"> 返回列表</a>
+	<a href="../../ShowAllNoticeServlet"> 返回列表</a>
 </button>
 </form>
 

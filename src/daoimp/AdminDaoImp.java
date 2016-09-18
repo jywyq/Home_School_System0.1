@@ -73,10 +73,16 @@ public class AdminDaoImp implements AdminDao {
 	}
 
 	@Override
-	public boolean find(int aid, String apwd) {
+	public int find(int aid, String apwd) {
 		Administrator ad = (Administrator) session.load(Administrator.class, aid);//根据id查询
+		try{
+			ad.getApwd();
+		}catch(Exception e){
+			return 1;
+		}
 		System.out.println("-----Find: "+aid+" "+apwd);
 		System.out.println("actual pwd :"+ad.getApwd());
-		return ad.getApwd().equals(apwd);
+		if(ad.getApwd().equals(apwd))return 2;
+		else return 0;
 	}
 }

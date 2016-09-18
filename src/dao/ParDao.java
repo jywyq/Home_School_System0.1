@@ -12,5 +12,5 @@ public interface ParDao {
 	public EP queryAdById(int pid);
 	public void updateAd(EP par);
 	public void deleteAd(int pid);
-	public boolean find(int pid,String ppwd);
+	public int find(int pid,String ppwd);
 }

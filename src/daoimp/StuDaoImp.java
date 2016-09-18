@@ -9,6 +9,7 @@ import org.hibernate.query.Query;
 
 import dao.StuDao;
 import hiber_sessionfac.HibernateSessionFactory;
+import hibernate.Administrator;
 import hibernate.ES;
 
 public class StuDaoImp implements StuDao {
@@ -73,10 +74,14 @@ public class StuDaoImp implements StuDao {
 	}
 
 	@Override
-	public boolean find(int sid, String spwd) {
+	public int find(int sid, String spwd) {
 		ES ad = (ES) session.load(ES.class, sid);//根据id查询
-		System.out.println("-----Find: "+sid+" "+spwd);
-		//System.out.println("actual pwd :"+ad.getSpwd());
-		return ad.getSpwd().equals(spwd);
+		try{
+			ad.getSpwd();
+		}catch(Exception e){
+			return 1;
+		}
+		if(ad.getSpwd().equals(spwd))return 2;
+		else return 0;
 	}
 }

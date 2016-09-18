@@ -12,5 +12,5 @@ public interface StuDao {
 	public ES queryAdById(int sid);
 	public void updateAd(ES stu);
 	public void deleteAd(int sid);
-	public boolean find(int sid,String spwd);
+	public int find(int sid,String spwd);
 }

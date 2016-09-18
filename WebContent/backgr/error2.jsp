@@ -7,6 +7,6 @@
 <title>ERROR</title>
 </head>
 <body>
-	密码错误！
+	账号不存在！
 </body>
 </html>

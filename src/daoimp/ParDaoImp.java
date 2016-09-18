@@ -10,6 +10,7 @@ import org.hibernate.query.Query;
 import dao.ParDao;
 import hiber_sessionfac.HibernateSessionFactory;
 import hibernate.EP;
+import hibernate.ES;
 
 
 public class ParDaoImp implements ParDao {
@@ -74,10 +75,14 @@ public class ParDaoImp implements ParDao {
 	}
 
 	@Override
-	public boolean find(int pid, String ppwd) {
+	public int find(int pid, String ppwd) {
 		EP ad = (EP) session.load(EP.class, pid);//根据id查询
-		System.out.println("-----Find: "+pid+" "+ppwd);
-		//System.out.println("actual pwd :"+ad.getSpwd());
-		return ad.getPpwd().equals(ppwd);
+		try{
+			ad.getPpwd();
+		}catch(Exception e){
+			return 1;
+		}
+		if(ad.getPpwd().equals(ppwd))return 2;
+		else return 0;
 	}
 }

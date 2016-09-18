@@ -9,6 +9,7 @@ import org.hibernate.query.Query;
 
 import dao.TeaDao;
 import hiber_sessionfac.HibernateSessionFactory;
+import hibernate.ES;
 import hibernate.ET;
 
 public class TeaDaoImp implements TeaDao {
@@ -73,10 +74,14 @@ public class TeaDaoImp implements TeaDao {
 	}
 
 	@Override
-	public boolean find(int tid, String tpwd) {
+	public int find(int tid, String tpwd) {
 		ET ad = (ET) session.load(ET.class, tid);//根据id查询
-		System.out.println("-----Find: "+tid+" "+tpwd);
-		//System.out.println("actual pwd :"+ad.getSpwd());
-		return ad.getTpwd().equals(tpwd);
+		try{
+			ad.getTpwd();
+		}catch(Exception e){
+			return 1;
+		}
+		if(ad.getTpwd().equals(tpwd))return 2;
+		else return 0;
 	}
 }

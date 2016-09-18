@@ -5,6 +5,8 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/frnt/";
+	String ba = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+	+ path + "/";
 %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -25,7 +27,7 @@
 <p>
 公告类别</p>
 </a></li>
-<li><a href="<%=basePath%>notice/Notice.html">
+<li><a href="<%=ba%>ShowAllNoticeServlet">
 <p>
 公告管理</p>
 </a></li>

@@ -12,5 +12,5 @@ public interface TeaDao {
 	public ET queryAdById(int tid);
 	public void updateAd(ET tea);
 	public void deleteAd(int tid);
-	public boolean find(int tid,String tpwd);
+	public int find(int tid,String tpwd);
 }

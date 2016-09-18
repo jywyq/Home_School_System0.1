@@ -20,6 +20,7 @@ public class AdminAddServlet extends HttpServlet {
 
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
+		this.doPost(request, response);// 调用doPost方法
 		out.flush();
 		out.close();
 	}
