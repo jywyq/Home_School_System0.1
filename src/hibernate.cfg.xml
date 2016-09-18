@@ -22,7 +22,6 @@
         <mapping resource="hibernate/RTeacherincharge.hbm.xml" />
         <mapping resource="hibernate/ECs.hbm.xml" />
         <mapping resource="hibernate/EP.hbm.xml" />
-        <mapping resource="hibernate/RSchoolhome.hbm.xml" />
         <mapping resource="hibernate/EC.hbm.xml" />
         <mapping resource="hibernate/ES.hbm.xml" />
         <mapping resource="hibernate/ET.hbm.xml" />

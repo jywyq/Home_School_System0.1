@@ -51,15 +51,27 @@ function r_1(num){
 <script language="javascript" type="text/javascript">
     
 function srcchange(id){
-    if(id=="hr1")
+    if(id=="hr101")
     {
-        document.getElementById("mainFrame").src="<%=basePath%>rsxz/Employlee.html";
+        document.getElementById("mainFrame").src="QueryParBySid?sid=${id}";
+        document.getElementById("dTitle").innerHTML="<img src='<%=basePath%>images/rensiManage.jpg' alt='' style='margin-top:5px'/>";
+        document.getElementById("dTitle").style.display="block";
+    }
+    else if(id=="hr102")
+    {
+        document.getElementById("mainFrame").src="QueryClassByTid?tid=${id}";
+        document.getElementById("dTitle").innerHTML="<img src='<%=basePath%>images/rensiManage.jpg' alt='' style='margin-top:5px'/>";
+        document.getElementById("dTitle").style.display="block";
+    }
+    else if(id=="hr103")
+    {
+        document.getElementById("mainFrame").src="QueryStuByPid?pid=${id}";
         document.getElementById("dTitle").innerHTML="<img src='<%=basePath%>images/rensiManage.jpg' alt='' style='margin-top:5px'/>";
         document.getElementById("dTitle").style.display="block";
     }
     else if(id=="hr2")
     {
-    	document.getElementById("mainFrame").src="<%=basePath%>rsxz/RecruiterApply.html";
+    	document.getElementById("mainFrame").src="QueryClassBySid?sid=${id}";
     	document.getElementById("dTitle").innerHTML="<img src='<%=basePath%>images/xingzhengManage.jpg' alt='' style='margin-top:5px'/>";
     	document.getElementById("dTitle").style.display="block";
     }
@@ -441,14 +453,14 @@ body,td,th {
 <ul>
 <c:choose>
  <c:when test="${requestScope.tp== '1'}">
-	<li><a onclick="srcchange('hr1');" style="cursor: hand">我的家长</a></li>
-	<li><a onclick="srcchange('hr2');" style="cursor: hand">我的老师</a></li>
+	<li><a onclick="srcchange('hr101');" style="cursor: hand">我的家长</a></li>
+	<li><a onclick="srcchange('hr2');" style="cursor: hand">我的班级</a></li>
  </c:when> 
  <c:when test="${requestScope.tp== '2'}">
-	<li><a onclick="srcchange('hr1');" style="cursor: hand">我的班级</a></li>
+	<li><a onclick="srcchange('hr102');" style="cursor: hand">我的班级</a></li>
  </c:when> 
  <c:when test="${requestScope.tp== '3'}">
-	<li><a onclick="srcchange('hr1');" style="cursor: hand">我的孩子</a></li>
+	<li><a onclick="srcchange('hr103');" style="cursor: hand">我的孩子</a></li>
  </c:when>
 </c:choose>
 

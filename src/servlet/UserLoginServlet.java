@@ -50,6 +50,7 @@ public class UserLoginServlet extends HttpServlet {
 		String pwd = request.getParameter("pwd");
 		int tp = Integer.parseInt(request.getParameter("tp"));
 		System.out.println("id: "+id+" pwd: "+pwd+" tp: "+tp);
+		request.setAttribute("id",id);// 把获得的对象放入request对象中
 		request.setAttribute("tp",tp);// 把获得的对象放入request对象中
 		if(tp==1){
 			StuDao dao = new StuDaoImp();

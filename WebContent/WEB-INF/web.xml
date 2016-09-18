@@ -328,6 +328,46 @@
     <servlet-name>ShowAllNoticeServlet2</servlet-name>
     <url-pattern>/ShowAllNoticeServlet2</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryClassByTid</servlet-name>
+    <servlet-class>servlet.QueryClassByTid</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryClassByTid</servlet-name>
+    <url-pattern>/QueryClassByTid</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryStuByCsid</servlet-name>
+    <servlet-class>servlet.QueryStuByCsid</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryStuByCsid</servlet-name>
+    <url-pattern>/QueryStuByCsid</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryParBySid</servlet-name>
+    <servlet-class>servlet.QueryParBySid</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryParBySid</servlet-name>
+    <url-pattern>/QueryParBySid</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryClassBySid</servlet-name>
+    <servlet-class>servlet.QueryClassBySid</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryClassBySid</servlet-name>
+    <url-pattern>/QueryClassBySid</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryStuByPid</servlet-name>
+    <servlet-class>servlet.QueryStuByPid</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryStuByPid</servlet-name>
+    <url-pattern>/QueryStuByPid</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>frnt/login.jsp</welcome-file>
   </welcome-file-list>
