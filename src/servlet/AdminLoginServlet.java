@@ -41,7 +41,16 @@ public class AdminLoginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		int aid = Integer.parseInt(request.getParameter("aid"));// 获得页面传递的empno
+		String tmp=request.getParameter("aid");
+		int aid;
+		try{
+			aid = Integer.parseInt(tmp);// 获得页面传递的empno
+		}catch(Exception e){
+			response.sendRedirect("backgr/errornull.jsp");
+			out.flush();
+			out.close();
+			return;
+		}
 		String apwd = request.getParameter("apwd");
 		AdminDao dao = new AdminDaoImp();
 		int res=dao.find(aid,apwd);

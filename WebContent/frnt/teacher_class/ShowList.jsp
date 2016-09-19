@@ -18,36 +18,31 @@
 <link rel="stylesheet" type="text/css" href="<%=basePath%>css/index.css">
 </head>
 <body>
-<h5>签到表</h5>
+<h5>表</h5>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mian_b_bg">
 <%  
 	Connection con = null;   
 	try{ 
-		Class.forName("com.mysql.jdbc.Driver");   
-		String dbUrl = "jdbc:mysql://localhost:3306/school_home_system?useUnicode=true&characterEncoding=UTF-8";   
-		String dbUser = "root";   
-		String dbPwd = "JYwyq1996";
-		String sql="select * from  r_checkin";  
-		con = DriverManager.getConnection(dbUrl,dbUser,dbPwd);   
-		//out.print("已连接5。。。。。");   
-		Statement stmt=con.createStatement();   
-		ResultSet rs=stmt.executeQuery(sql); //执行查询  
-		ResultSetMetaData rsmd = rs.getMetaData();   
+		ResultSet rs=(ResultSet)request.getAttribute("rs"); //执行查询  
+		ResultSetMetaData rsmd = (ResultSetMetaData)request.getAttribute("rsmd");   
 		int columnCount = rsmd.getColumnCount();   
 		// 输出列名   
 	    for (int i=1; i<=columnCount; i++){   
-	    	out.print("<td>");
-	        out.print(rsmd.getColumnName(i));   
-	        //out.print("(" + rsmd.getColumnTypeName(i) + ")");   
-	        out.print("</td>");   
+	    	if(!rsmd.getColumnName(i).contains("id") && !rsmd.getColumnName(i).contains("pwd")){
+	    		out.print("<td>");
+	    		out.print(rsmd.getColumnName(i));
+	    		out.print("</td>");  
+	    	}
 	    }   
 	    out.print("<tr>");
 	    // 输出数据   
 	    while (rs.next()){   
 	        for (int i=1; i<=columnCount; i++){   
-	        	out.print("<td>");   
-	            out.print(rs.getString(i));   
-	            out.print("</td>");   
+	        	if(!rsmd.getColumnName(i).contains("id") && !rsmd.getColumnName(i).contains("pwd")){
+	        		out.print("<td>");   
+		            out.print(rs.getString(i));   
+		            out.print("</td>");   
+	        	}
 	        }   
 	        out.print("<tr>");
 	    }

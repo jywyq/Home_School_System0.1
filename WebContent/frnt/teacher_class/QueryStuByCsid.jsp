@@ -88,17 +88,17 @@
 年龄
 </td>
 
-<td width="10%" class="mian_b_bg_lm">
+<td width="7%" class="mian_b_bg_lm">
 身高
 </td>
-<td width="10%" class="mian_b_bg_lm">
+<td width="7%" class="mian_b_bg_lm">
 体重
 </td>
-<td width="20%" class="mian_b_bg_lm">
+<td width="18%" class="mian_b_bg_lm">
 地址
 </td>
 
-<td width="16%" class="mian_b_bg_lm" colspan="2">
+<td width="18%" class="mian_b_bg_lm" colspan="2">
 操作
 </td>
 </tr>
@@ -113,7 +113,9 @@
 			<td>${list. sh }</td>
 			<td>${list. sw }</td>
 			<td>${list. sadd }</td>
-			<td width="5%"><div class="mian_b_icon_04"><a href="QueryParBySid?sid=${list.sid }">查看</a></div></td>
+			<td width="6%"><div class="mian_b_icon_04"><a href="QueryParBySid?sid=${list.sid }">查看家长</a></div></td>
+			<td width="6%"><div class="mian_b_icon_04"><a href="QueryTeaBySid?sid=${list.sid }">查看老师</a></div></td>
+			<td width="6%"><div class="mian_b_icon_04"><a href="QueryPoiBySid?sid=${list.sid }">查看成绩</a></div></td>
 		</tr>
 	</c:forEach>
 <td class="mian_b_bg_lm">
@@ -132,14 +134,17 @@
 年龄
 </td>
 
-<td width="10%" class="mian_b_bg_lm">
+<td width="7%" class="mian_b_bg_lm">
 身高
 </td>
-<td width="10%" class="mian_b_bg_lm">
+<td width="7%" class="mian_b_bg_lm">
 体重
 </td>
-<td width="20%" class="mian_b_bg_lm">
+<td width="18%" class="mian_b_bg_lm">
 地址
+</td>
+<td width="18%" class="mian_b_bg_lm" colspan="2">
+操作
 </td>
 </tr>
 </table>

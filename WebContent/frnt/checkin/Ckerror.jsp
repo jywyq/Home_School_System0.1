@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-已完成过签到！
+<h1>已完成过签到！</h1>
 </body>
 </html>

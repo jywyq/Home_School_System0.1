@@ -76,19 +76,16 @@
 <input name="" type="checkbox" value="">
 </td>
 <td width="20%" colspan="2" class="mian_b_bg_lm">
-班级号
+课序号
+</td>
+<td width="30%" class="mian_b_bg_lm">
+名字
 </td>
 <td width="20%" class="mian_b_bg_lm">
-班级
-</td>
-<td width="20%" class="mian_b_bg_lm">
-年级
-</td>
-<td width="20%" class="mian_b_bg_lm">
-地点
+开设学期
 </td>
 
-<td width="16%" class="mian_b_bg_lm" colspan="2">
+<td width="18%" class="mian_b_bg_lm" colspan="2">
 操作
 </td>
 </tr>
@@ -96,28 +93,23 @@
 		<tr>
 			<td><input name="" type="checkbox" value=""></td>
 			<td width="44"><img src="<%=basePath%>images\pic_03.jpg" width="40" height="40" alt="" style="margin: 3px;"></td>
-			<td><span style="color: #307d74;">${list.csid  }</span></td>
-			<td>${list.classs }</td>
-			<td>${list. grade }</td>
-			<td>${list. csadd }</td>
-			<td width="6%"><div class="mian_b_icon_04"><a href="QueryStuByCsid?csid=${list.csid }">查看学生</a></div></td>
-			<td width="6%"><div class="mian_b_icon_04"><a href="QueryPoiByCsid?csid=${list.csid }">查看成绩</a></div></td>
+			<td><span style="color: #307d74;">${list.cid  }</span></td>
+			<td>${list. cname }</td>
+			<td>${list. cterm }</td>
+			<td width="6%"><div class="mian_b_icon_04"><a href="QueryPoiByCid_Sid?cid=${list.cid }&id=${id}&tp=${tp}">查看成绩</a></div></td>
 		</tr>
 	</c:forEach>
 <td class="mian_b_bg_lm">
 <input name="" type="checkbox" value="">
 </td>
-<td colspan="2" class="mian_b_bg_lm">
-班级号
+<td width="20%" colspan="2" class="mian_b_bg_lm">
+课序号
 </td>
-<td class="mian_b_bg_lm">
-班级
+<td width="30%" class="mian_b_bg_lm">
+名字
 </td>
-<td class="mian_b_bg_lm">
-年级
-</td>
-<td class="mian_b_bg_lm">
-地点
+<td width="20%" class="mian_b_bg_lm">
+开设学期
 </td>
 </tr>
 </table>

@@ -46,7 +46,15 @@ public class UserLoginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		int id = Integer.parseInt(request.getParameter("id"));// 获得页面传递的empno
+		int id;
+		try{
+			id = Integer.parseInt(request.getParameter("id"));// 获得页面传递的empno
+		}catch(Exception e){
+			response.sendRedirect("backgr/errornull.jsp");
+			out.flush();
+			out.close();
+			return;
+		}
 		String pwd = request.getParameter("pwd");
 		int tp = Integer.parseInt(request.getParameter("tp"));
 		System.out.println("id: "+id+" pwd: "+pwd+" tp: "+tp);
@@ -69,7 +77,7 @@ public class UserLoginServlet extends HttpServlet {
 			int res=dao.find(id, pwd);
 			if(res==2){
 				String name = dao.queryAdById(id).getTname();// 调用实现类中根据id查询的方法
-				request.setAttribute("name", name+"学生");// 把获得的对象放入request对象中
+				request.setAttribute("name", name+"老师");// 把获得的对象放入request对象中
 				// 转发到现实单条记录的页面
 				request.getRequestDispatcher("frnt/index.jsp").forward(request, response);
 			}
@@ -80,7 +88,7 @@ public class UserLoginServlet extends HttpServlet {
 			int res=dao.find(id, pwd);
 			if(res==2){
 				String name = dao.queryAdById(id).getPname();// 调用实现类中根据id查询的方法
-				request.setAttribute("name", name+"学生");// 把获得的对象放入request对象中
+				request.setAttribute("name", name+"家长");// 把获得的对象放入request对象中
 				// 转发到现实单条记录的页面
 				request.getRequestDispatcher("frnt/index.jsp").forward(request, response);
 			}

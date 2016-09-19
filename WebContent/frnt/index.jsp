@@ -69,6 +69,24 @@ function srcchange(id){
         document.getElementById("dTitle").innerHTML="<img src='<%=basePath%>images/rensiManage.jpg' alt='' style='margin-top:5px'/>";
         document.getElementById("dTitle").style.display="block";
     }
+    else if(id=="hr1001")
+    {
+        document.getElementById("mainFrame").src="QueryStuById?sid=${id}";
+        document.getElementById("dTitle").innerHTML="<img src='<%=basePath%>images/rensiManage.jpg' alt='' style='margin-top:5px'/>";
+        document.getElementById("dTitle").style.display="block";
+    }
+    else if(id=="hr1002")
+    {
+        document.getElementById("mainFrame").src="QueryTeaById?tid=${id}";
+        document.getElementById("dTitle").innerHTML="<img src='<%=basePath%>images/rensiManage.jpg' alt='' style='margin-top:5px'/>";
+        document.getElementById("dTitle").style.display="block";
+    }
+    else if(id=="hr1003")
+    {
+        document.getElementById("mainFrame").src="QueryParById?pid=${id}";
+        document.getElementById("dTitle").innerHTML="<img src='<%=basePath%>images/rensiManage.jpg' alt='' style='margin-top:5px'/>";
+        document.getElementById("dTitle").style.display="block";
+    }
     else if(id=="hr2")
     {
     	document.getElementById("mainFrame").src="QueryClassBySid?sid=${id}";
@@ -160,12 +178,12 @@ function srcchange(id){
     }
     else if(id=="hr8")
     {
-     document.getElementById("mainFrame").src="<%=basePath%>task/Schedule.html";
+     document.getElementById("mainFrame").src="QueryStuByTid?tid=${id}";
      document.getElementById("dTitle").style.display="none";
     }
     else if(id=="hr9")
     {
-    document.getElementById("mainFrame").src="<%=basePath%>task/TaskAllot.html";
+    document.getElementById("mainFrame").src="QueryStuByPid?pid=${id}";
     document.getElementById("dTitle").style.display="none";
     }
         else if(id=="hr10")
@@ -200,7 +218,7 @@ function srcchange(id){
     }
     else if(id=="hr24")
     {
-    document.getElementById("mainFrame").src="<%=basePath%>client/OrderManager.html";
+    document.getElementById("mainFrame").src="ShowAllClassServlet";
     document.getElementById("dTitle").innerHTML="<img src='<%=basePath%>images/orderManage.jpg' alt='' style='margin-top:5px'/>";
     document.getElementById("dTitle").style.display="block";
     }
@@ -272,7 +290,7 @@ function srcchange(id){
     }
         else if(id=="hr38")
     {
-    document.getElementById("mainFrame").src="<%=basePath%>item/TaskAllo.html";
+    document.getElementById("mainFrame").src="ShowAllCourse_frnt?id=${id}&tp=${tp}";
     document.getElementById("dTitle").style.display="none";
     }
         else if(id=="hr39")
@@ -461,12 +479,15 @@ body,td,th {
  <c:when test="${requestScope.tp== '1'}">
 	<li><a onclick="srcchange('hr101');" style="cursor: hand">我的家长</a></li>
 	<li><a onclick="srcchange('hr2');" style="cursor: hand">我的班级</a></li>
+	<li><a onclick="srcchange('hr1001');" style="cursor: hand">我的信息管理</a></li>
  </c:when> 
  <c:when test="${requestScope.tp== '2'}">
 	<li><a onclick="srcchange('hr102');" style="cursor: hand">我的班级</a></li>
+	<li><a onclick="srcchange('hr1002');" style="cursor: hand">我的信息管理</a></li>
  </c:when> 
  <c:when test="${requestScope.tp== '3'}">
 	<li><a onclick="srcchange('hr103');" style="cursor: hand">我的孩子</a></li>
+	<li><a onclick="srcchange('hr1003');" style="cursor: hand">我的信息管理</a></li>
  </c:when>
 </c:choose>
 
@@ -534,7 +555,6 @@ body,td,th {
 <div class="left_r1" onmousemove="show(6)" onmouseout="hidden1(6)" id="6">
 <div class="left_r" onmousemove="show(6)" onmouseout="hidden1(6)">
 <ul>
-<li><a onclick="srcchange('hr36');" style="cursor: hand">成绩查看</a></li>
 <li><a onclick="srcchange('hr38');" style="cursor: hand">课程查看</a></li>
 </ul>
 </div>
@@ -548,17 +568,6 @@ body,td,th {
 </div>
 </div>
 
-<div class="left_r1" onmousemove="show(8)" onmouseout="hidden1(8)" id="8">
-<div class="left_r" onmousemove="show(8)" onmouseout="hidden1(8)">
-<ul>
-<c:choose>
-	<c:when test="${requestScope.tp== '2'}">
-	<li><a onclick="srcchange('hr20')" style="cursor: hand">我的班级</a></li>
-	</c:when> 
-</c:choose>
-</ul>
-</div>
-</div>
 <div class="left_r1" onmousemove="show(9)" onmouseout="hidden1(9)" id="9">
 <div class="left_r" onmousemove="show(9)" onmouseout="hidden1(9)">
 <ul>
@@ -577,12 +586,12 @@ body,td,th {
 <ul id="nav">
 
 <li class="y_css" id="xx2">
-<a href="<%=basePath%>notice/NoticeClass.html" onclick="changeIcon('Notice')" target="mainFrame" onmousedown="javascript:pr('xx2')" onmouseover="show(2)" onmouseout="hidden1(2)"><span></span>
+<a onclick="changeIcon('Notice')" target="mainFrame" onmousedown="javascript:pr('xx2')" onmouseover="show(2)" onmouseout="hidden1(2)"><span></span>
 <p class="icon_10">
 公告</p>
 </a></li>
 <li class="y_css" id="xx1" onmouseover="show(1)" onmouseout="hidden1(1)">
-<a href="<%=basePath%>rsxz/Employlee.html" onclick="changeIcon('HR')" target="mainFrame" onmousedown="javascript:pr('xx1')"><span></span>
+<a onclick="changeIcon('HR')" target="mainFrame" onmousedown="javascript:pr('xx1')"><span></span>
 <p class="icon_01">
 <c:choose>
  <c:when test="${requestScope.tp== '1'}">  学生信息管理</c:when> 
@@ -592,7 +601,7 @@ body,td,th {
 </p>
 </a></li>
 <li class="y_css" id="xx3">
-<a href="<%=basePath%>knowledge/KnowLedgeClass.html" target="mainFrame" onclick="changeIcon('KnowLedge')" onmousedown="javascript:pr('xx3')" onmouseover="show(3)" onmouseout="hidden1(3)">
+<a target="mainFrame" onclick="changeIcon('KnowLedge')" onmousedown="javascript:pr('xx3')" onmouseover="show(3)" onmouseout="hidden1(3)">
 <span></span>
 <p class="icon_02">
 签到管理</p>
@@ -602,7 +611,7 @@ body,td,th {
 <c:choose>
  <c:when test="${requestScope.tp== '2' || requestScope.tp== '3'}">
 	<li class="y_css" id="xx4">
-	<a href="<%=basePath%>task/Schedule.html" onclick="changeIcon('Task')" target="mainFrame" onmousedown="javascript:pr('xx4')" onmouseover="show(4)" onmouseout="hidden1(4)"><span></span>
+	<a onclick="changeIcon('Task')" target="mainFrame" onmousedown="javascript:pr('xx4')" onmouseover="show(4)" onmouseout="hidden1(4)"><span></span>
 	<p class="icon_04">
 	家校联系</p>
 	</a></li>
@@ -611,30 +620,20 @@ body,td,th {
 
 
 <li class="y_css" id="xx5">
-<a href="<%=basePath%>client/OrderManager.html" onclick="changeIcon('Order')" target="mainFrame" onmousedown="javascript:pr('xx5')" onmouseover="show(5)" onmouseout="hidden1(5)"><span></span>
+<a onclick="changeIcon('Order')" target="mainFrame" onmousedown="javascript:pr('xx5')" onmouseover="show(5)" onmouseout="hidden1(5)"><span></span>
 <p class="icon_05">
 班级一览</p>
 </a></li>
 <li class="y_css" id="xx6">
-<a href="<%=basePath%>item/Item.html" onclick="changeIcon('Item')" target="mainFrame" onmousedown="javascript:pr('xx6')" onmouseover="show(6)" onmouseout="hidden1(6)"><span></span>
+<a onclick="changeIcon('Item')" target="mainFrame" onmousedown="javascript:pr('xx6')" onmouseover="show(6)" onmouseout="hidden1(6)"><span></span>
 <p class="icon_07">
 课程查询</p>
 </a></li>
 <li class="y_css" id="xx7">
-<a href="#" onclick="changeIcon('Count')" target="mainFrame" onmousedown="javascript:pr('xx7')" onmouseover="show(7)" onmouseout="hidden1(7)"><span></span>
+<a onclick="changeIcon('Count')" target="mainFrame" onmousedown="javascript:pr('xx7')" onmouseover="show(7)" onmouseout="hidden1(7)"><span></span>
 <p class="icon_11">
 留言板</p>
 </a></li>
-<c:choose>
-	<c:when test="${requestScope.tp== '2'}">
-		<li class="y_css" id="xx8">
-		<a href="<%=basePath%>xtsz/Branch.html" onclick="changeIcon('System')" target="mainFrame" onmousedown="javascript:pr('xx8')" onmouseover="show(8)" onmouseout="hidden1(8)"><span></span>
-		<p class="icon_12">
-		班级管理</p>
-		</a></li>
-	</c:when> 
-</c:choose>
-
 
 <li class="y_css" id="xx9">
 <a href="<%=basePath%>product/productManage.html" target="mainFrame" onclick="changeIcon('Product')" onmousedown="javascript:pr('xx9')" onmouseover="show(9)" onmouseout="hidden1(9)">

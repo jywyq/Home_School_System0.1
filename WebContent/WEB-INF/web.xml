@@ -376,6 +376,54 @@
     <servlet-name>CkServlet</servlet-name>
     <url-pattern>/CkServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryStuByTid</servlet-name>
+    <servlet-class>servlet.QueryStuByTid</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryStuByTid</servlet-name>
+    <url-pattern>/QueryStuByTid</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryTeaBySid</servlet-name>
+    <servlet-class>servlet.QueryTeaBySid</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryTeaBySid</servlet-name>
+    <url-pattern>/QueryTeaBySid</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryPoiByCsid</servlet-name>
+    <servlet-class>servlet.QueryPoiByCsid</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryPoiByCsid</servlet-name>
+    <url-pattern>/QueryPoiByCsid</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ShowAllCourse_frnt</servlet-name>
+    <servlet-class>servlet.ShowAllCourse_frnt</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowAllCourse_frnt</servlet-name>
+    <url-pattern>/ShowAllCourse_frnt</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryPoiByCid_Sid</servlet-name>
+    <servlet-class>servlet.QueryPoiByCid_Sid</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryPoiByCid_Sid</servlet-name>
+    <url-pattern>/QueryPoiByCid_Sid</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryPoiBySid</servlet-name>
+    <servlet-class>servlet.QueryPoiBySid</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryPoiBySid</servlet-name>
+    <url-pattern>/QueryPoiBySid</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>frnt/login.jsp</welcome-file>
   </welcome-file-list>
