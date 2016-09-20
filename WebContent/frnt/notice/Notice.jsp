@@ -23,7 +23,7 @@
 </div>
 <div class="mian_top_c">
 <ul>
-<li><a href="<%=basePath%>notice/NoticeClass.html">
+<li><a href="#">
 <p>
 公告类别</p>
 </a></li>
@@ -31,11 +31,11 @@
 <p>
 公告管理</p>
 </a></li>
-<li><a href="<%=basePath%>notice/NoticeCount.html">
+<li><a href="#">
 <p>
 公告统计</p>
 </a></li>
-<li><a href="<%=basePath%>notice/NoticeShow.html">
+<li><a href="ShowAllNoticeServlet2">
 <p>
 公告查看</p>
 </a></li>

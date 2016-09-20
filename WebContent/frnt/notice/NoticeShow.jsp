@@ -21,19 +21,19 @@
 </div>
 <div class="mian_top_c">
 <ul>
-<li><a href="<%=basePath%>notice/NoticeClass.html">
+<li><a href="#">
 <p>
 公告类别</p>
 </a></li>
-<li><a href="<%=basePath%>notice/Notice.html">
+<li><a href="#">
 <p>
 公告管理</p>
 </a></li>
-<li><a href="<%=basePath%>notice/NoticeCount.html">
+<li><a href="#">
 <p>
 公告统计</p>
 </a></li>
-<li><a href="<%=basePath%>notice/NoticeShow.html">
+<li><a href="ShowAllNoticeServlet2">
 <p>
 公告查看</p>
 </a></li>
@@ -41,7 +41,7 @@
 </div>
 <div class="mian_b">
 <div class="mian_b1">
-<a href="<%=basePath%>notice/AddNotice.jsp" title="添加">
+<a href="#" title="添加">
 <p class="mian_b1_a1">
 </p>
 </a><a href="#" title="删除">
@@ -75,10 +75,10 @@
 <td width="3%" class="mian_b_bg_lm">
 <input name="" type="checkbox" value="">
 </td>
-<td width="20%" colspan="2" class="mian_b_bg_lm">
+<td width="15%" colspan="2" class="mian_b_bg_lm">
 公告标题
 </td>
-<td width="60%" class="mian_b_bg_lm">
+<td width="50%" class="mian_b_bg_lm">
 <span></span>公告内容
 </td>
 <td width="16%" class="mian_b_bg_lm" colspan="2">
@@ -101,7 +101,7 @@
 公告主题
 </td>
 <td class="mian_b_bg_lm">
-<span></span>有效期
+<span></span>公告内容
 </td>
 <td class="mian_b_bg_lm" colspan="2">
 操作

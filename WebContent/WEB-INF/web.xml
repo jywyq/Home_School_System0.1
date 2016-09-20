@@ -424,6 +424,22 @@
     <servlet-name>QueryPoiBySid</servlet-name>
     <url-pattern>/QueryPoiBySid</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryTeaByCsid</servlet-name>
+    <servlet-class>servlet.QueryTeaByCsid</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryTeaByCsid</servlet-name>
+    <url-pattern>/QueryTeaByCsid</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ShowAllClassServlet2</servlet-name>
+    <servlet-class>servlet.ShowAllClassServlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowAllClassServlet2</servlet-name>
+    <url-pattern>/ShowAllClassServlet2</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>frnt/login.jsp</welcome-file>
   </welcome-file-list>

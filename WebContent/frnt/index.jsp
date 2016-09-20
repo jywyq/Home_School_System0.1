@@ -218,7 +218,7 @@ function srcchange(id){
     }
     else if(id=="hr24")
     {
-    document.getElementById("mainFrame").src="ShowAllClassServlet";
+    document.getElementById("mainFrame").src="ShowAllClassServlet2";
     document.getElementById("dTitle").innerHTML="<img src='<%=basePath%>images/orderManage.jpg' alt='' style='margin-top:5px'/>";
     document.getElementById("dTitle").style.display="block";
     }
@@ -560,14 +560,6 @@ body,td,th {
 </div>
 </div>
 
-<div class="left_r1" onmousemove="show(7)" onmouseout="hidden1(7)" id="7">
-<div class="left_r" onmousemove="show(7)" onmouseout="hidden1(7)">
-<ul>
-<li><a onclick="srcchange('#');" style="cursor: hand">留言板</a></li>
-</ul>
-</div>
-</div>
-
 <div class="left_r1" onmousemove="show(9)" onmouseout="hidden1(9)" id="9">
 <div class="left_r" onmousemove="show(9)" onmouseout="hidden1(9)">
 <ul>
@@ -628,11 +620,6 @@ body,td,th {
 <a onclick="changeIcon('Item')" target="mainFrame" onmousedown="javascript:pr('xx6')" onmouseover="show(6)" onmouseout="hidden1(6)"><span></span>
 <p class="icon_07">
 课程查询</p>
-</a></li>
-<li class="y_css" id="xx7">
-<a onclick="changeIcon('Count')" target="mainFrame" onmousedown="javascript:pr('xx7')" onmouseover="show(7)" onmouseout="hidden1(7)"><span></span>
-<p class="icon_11">
-留言板</p>
 </a></li>
 
 <li class="y_css" id="xx9">

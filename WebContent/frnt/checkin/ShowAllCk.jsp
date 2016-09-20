@@ -27,7 +27,7 @@
 		String dbUrl = "jdbc:mysql://localhost:3306/school_home_system?useUnicode=true&characterEncoding=UTF-8";   
 		String dbUser = "root";   
 		String dbPwd = "JYwyq1996";
-		String sql="select * from  r_checkin";  
+		String sql="select * from  r_checkin natural join e_s";  
 		con = DriverManager.getConnection(dbUrl,dbUser,dbPwd);   
 		//out.print("已连接5。。。。。");   
 		Statement stmt=con.createStatement();   
@@ -35,19 +35,22 @@
 		ResultSetMetaData rsmd = rs.getMetaData();   
 		int columnCount = rsmd.getColumnCount();   
 		// 输出列名   
-	    for (int i=1; i<=columnCount; i++){   
-	    	out.print("<td>");
-	        out.print(rsmd.getColumnName(i));   
-	        //out.print("(" + rsmd.getColumnTypeName(i) + ")");   
-	        out.print("</td>");   
+		for (int i=1; i<=columnCount; i++){   
+	    	if(!rsmd.getColumnName(i).contains("id") && !rsmd.getColumnName(i).contains("pwd")){
+	    		out.print("<td>");
+	    		out.print(rsmd.getColumnName(i));
+	    		out.print("</td>");  
+	    	}
 	    }   
 	    out.print("<tr>");
 	    // 输出数据   
 	    while (rs.next()){   
 	        for (int i=1; i<=columnCount; i++){   
-	        	out.print("<td>");   
-	            out.print(rs.getString(i));   
-	            out.print("</td>");   
+	        	if(!rsmd.getColumnName(i).contains("id") && !rsmd.getColumnName(i).contains("pwd")){
+	        		out.print("<td>");   
+		            out.print(rs.getString(i));   
+		            out.print("</td>");   
+	        	}
 	        }   
 	        out.print("<tr>");
 	    }

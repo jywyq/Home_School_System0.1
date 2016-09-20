@@ -271,9 +271,9 @@ body {
 			<div class="div3">
 				<ul>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('backgr/afficheQuery.jsp');">查看公告</a></li>
+						onClick="openurl('ShowAllNoticeServlet');">查看公告</a></li>
 					<li><a class="a" href="javascript:void(0);"
-						onClick="openurl('backgr/afficheAdd.jsp');">添加公告</a></li>
+						onClick="openurl('frnt/notice/AddNotice.jsp');">添加公告</a></li>
 				</ul>
 			</div>
 			<div class="div2">

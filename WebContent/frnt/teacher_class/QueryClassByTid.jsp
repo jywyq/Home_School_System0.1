@@ -75,13 +75,13 @@
 <td width="3%" class="mian_b_bg_lm">
 <input name="" type="checkbox" value="">
 </td>
-<td width="20%" colspan="2" class="mian_b_bg_lm">
+<td width="18%" colspan="2" class="mian_b_bg_lm">
 班级号
 </td>
-<td width="20%" class="mian_b_bg_lm">
+<td width="18%" class="mian_b_bg_lm">
 班级
 </td>
-<td width="20%" class="mian_b_bg_lm">
+<td width="18%" class="mian_b_bg_lm">
 年级
 </td>
 <td width="20%" class="mian_b_bg_lm">
@@ -102,6 +102,7 @@
 			<td>${list. csadd }</td>
 			<td width="6%"><div class="mian_b_icon_04"><a href="QueryStuByCsid?csid=${list.csid }">查看学生</a></div></td>
 			<td width="6%"><div class="mian_b_icon_04"><a href="QueryPoiByCsid?csid=${list.csid }">查看成绩</a></div></td>
+			<td width="6%"><div class="mian_b_icon_04"><a href="QueryTeaByCsid?csid=${list.csid }">查看老师</a></div></td>
 		</tr>
 	</c:forEach>
 <td class="mian_b_bg_lm">
